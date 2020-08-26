@@ -188,15 +188,15 @@ The search included journal articles, conference proceedings and patents that ar
 \label{subsec: criteria}
 The focus of this survey is on AR piano prototypes. We needed to further filter these articles based on the following criteria:
 \begin{enumerate}
-    \item The research paper must have a working AR piano prototype
-    \item The prototype is made with augmented reality
-    \item The full research paper is publicly accessible 
+    \item The research paper discusses an AR piano prototype 
+    \item The AR piano prototype is meant for playing, learning or teaching the piano
+    \item The prototype has a component that makes it qualified as augmented reality
+    %\item The full research paper is publicly accessible 
 \end{enumerate}
-These inclusion criteria were manually done at the best judgment of the author. Following this criteria, we resulted to forty (40) articles. 
+These inclusion criteria were manually done at the best judgment of the author. Following this criteria, we resulted to forty (40) articles. Moreover, not all these prototypes immediately qualify based on the definition of AR. Prototypes that make use of both 2D and 3D are considered. Prototypes that simulate the effect of AR even if they do not implement the tracking of an object were also included in this review. 
+
 \subsection{Qualitative Analysis}
 We performed a qualitative analysis of the different papers retried after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 40 articles do not represent 40 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype. \\
-
-Moreover, not all these prototypes immediately qualify based on the definition of AR. Prototypes that make use of both 2D and 3D are considered. Prototypes that simulate the effect of AR even if they do not implement the tracking of an object were also included in this review. 
 
 \subsection{Data Gathering}
 A form was drafted to facilitate the gathering of data from the 40 included articles. The form seeks to retrieve the following information: 
@@ -215,11 +215,11 @@ The review was designed to easily recognize common trends among the papers inclu
 sample thought: when did hand tracking get popular and how spread out are they throughout the years 
 
 \begin{table}[]
-\caption{Table of studies and a checklist of their features based on contribution categories as described in section \ref{sec: strat}. Legend: \textbf{\#}= number of citations; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
+\caption{Table of studies and a checklist of their features based on contribution categories as described in section \ref{tab: all}. Legend: \textbf{\#}= number of citations; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
 \small\begin{tabular}{llrrccccccl}
-\hline
+\hline \hline
 \textbf{Paper} & \textbf{Author} & \textbf{Year} & \textbf{\#} & \textbf{KB} & \textbf{AT} & \textbf{PR} & \textbf{US} & \textbf{HT} & \textbf{LM} & \textbf{Others} \\ \hline
-P1    & \citet{huang2011piano}              & 2011 & 50         & \ding{51} &           &           & \ding{51} & \ding{51} &           & \\ \hline
+P1    & \citet{huang2011piano}              & 2011 & 50         & \ding{51} &           &           &           & \ding{51} &           & \\ \hline
 P2    & \citet{nugraha2014pemanfaatan}      & 2014 & 38         & \ding{51} &           &           & \ding{51} &           &           & \\ \hline
 P3    & \citet{barakonyi2005augmented}      & 2005 & 47         & \ding{51} & \ding{51} & \ding{51} &           &           & \ding{51} & \\ \hline
 P4    & \citet{chow2013music}               & 2013 & 45         & \ding{51} &           & \ding{51} & \ding{51} &           & \ding{51} & \\ \hline
@@ -268,7 +268,7 @@ P40   & \citet{xu20195}                     & 2019 & 0          &           & \d
 %P47   & \citet{birhanu2017interactive}      & 2017 & 0          &                  &       &         &   &      & &         \\
 %P48   &  \citet{rahman2013hand}             & 2013 & 6          &                  &       &         &   &     & &          \\
 %P49   & \citet{mostafizur2011application}   & 2011 & 5          &                  &       &         &   &       & &        \\ \hline
-      &                                     &           & \textit{\={x}}=21 & 47\% & 22\% & 67\%    & 47\%      & 20\%      & 32\%      & \\ \hline
+      &                                     &           & \textit{\={x}}=21 & 47\% & 22\% & 67\%    & 47\%      & 20\%      & 32\%      & \\ \hline \hline
 \label{tab:overview}
 \end{tabular}
 \end{table}
@@ -289,7 +289,7 @@ P40   & \citet{xu20195}                     & 2019 & 0          &           & \d
 
 \begin{figure}
     \centering
-    \includegraphics[width=10cm]{figures/typeyeartrend.png}
+    \includegraphics[width=15cm]{figures/typeyeartrend.png}
     \caption{Trend of AR piano prototype contribution categories within the last 2 decades}
     \label{fig:typeyeartrend}
 \end{figure}
@@ -307,6 +307,41 @@ Section discussing prototype whose main contributions focused on virtual agents/
 Section discussing prototype whose contributions focused on learning modes, emphasis on pedagogy and other learner-centric modes
 \section{Evaluation Techniques}
 done by studies on AR piano teaching systems (hypothesis based on cognition, realistic annotations etc)
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\caption{table 2}
+\label{tab:us} 
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllllllll} \hline \hline
+Paper & Author & Year & Content & sample & control group & treatment & results & metrics or constructs & tools \\ \hline
+P1 & \citet{huang2011piano} & 2011 & x &  & a & a & a & a & a \\
+P2 & \citet{nugraha2014pemanfaatan} & 2014 & a & 8 & a & major and minor chords animated, marker detection & a & usability, operation, attraction & self made questionnaire \\
+P4 & \citet{chow2013music} & 2013 & a & 7 & a & play a piece in the piano & a & usage, benefit, system rating & open ended questions \\
+P5 & \citet{weing2013piano} & 2013 & a & 5 & a & practice and exploration modes & a & finger information, notation, satisfaction, cognitive load & self made questionnaire \\
+P12 & \citet{kerdvibulvech2017innovative} & 2017 & a & 1 & a & play a piece in the piano & a & scoring, time interval & time tracking \\
+P15 & \citet{schmalstieg2007experiences} & 2007 & a & 0 & a & a & a & a & a \\
+P16 & \citet{correa2009computer} & 2009 & a & 0 & a & a & a & a & a \\
+P18 & \citet{takegawa2012piano} & 2012 & a & 0 & a & a & a & a & a \\
+P19 & \citet{xiao2010mirrorfugue} & 2011 & a & 0 & a & a & a & a & a \\
+P20 & \citet{xiao2013mirrorfugue} & 2013 & a & 0 & a & a & a & a & a \\
+P21 & \citet{li2018application} & 2018 & a & 0 & a & a & a & a & a \\
+P23 & \citet{leonard2013virtual} & 2013 & a & 0 & a & a & a & a & a \\
+P24 & \citet{raymaekers2014game} & 2014 & a & 0 & a & a & a & a & a \\
+P25 & \citet{rogers2014piano} & 2017 & a & 0 & a & a & a & a & a \\
+P27 & \citet{sun2018mr} & 2018 & a & 0 & a & a & a & a & a \\
+P31 & \citet{molloy2019mixed} & 2019 & a & 0 & a & a & a & a & a \\
+P35 & \citet{pan2018pilot} & 2018 & a & 0 & a & a & a & a & a \\
+P38 & \citet{kim2014ar} & 2014 & a & 0 & a & a & a & a & a \\
+P39 & \citet{xiao2011duet} & 2011 & a & 0 & x & x & x & x & x \\ \hline
+\hline
+\end{tabular}%
+}
+\end{table}
+
+
+
 
 \section{Discussion and Future Directions}
 
