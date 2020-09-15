@@ -147,10 +147,8 @@ In around the year 1700, the piano, an elegant yet complex to use musical instru
 
 This introduction is not yet done. I need to elaborate the second and third question in the abstract. 
 
-\subsection{Objectives}
-Several technologies have enabled the creation of prototypes, learning modes and interactive spaces. Over the last 20 years, we have observed progress in hardware computing power, tracking of elements in real-time (such has hand, object tracking) and in authoring AR tools, plug-ins and applications. These technologies are already seen and applied in several settings such as in tourism \cite{kounavis2012enhancing}, learning \cite{santos2013augmented}, manufacturing \cite{thomas1992augmented}, pilot training \cite{macchiarella2004augmented} and many others. As a first goal, this paper aims to review the different trends and categories that have improved AR experiences with special emphasis to the piano. Even though there have been several AR piano prototypes in current literature, we believe that only a few are developed with focus on improving how piano novices learn (and towards having sustainable, meaningful learning experiences). The different novel contributions in piano AR have been measured to be effective based on several metrics such as registration speed, quality of graphics, and observed learner performance. These studies have been written with a distinct context in mind. As such, replicating these studies will depend on various factors such as: accessibility of required hardware, difficulty of recreating assets, available open-source libraries and willing participants for user studies. As a second goal, we intend to guide researchers on possible directions towards introducing novel contributions in AR piano prototypes. We shall do this by summarizing the state-of-the-art implementation and evaluation of included literature. Then, we enumerate recommendations for learning piano with AR and discuss relevant innovations and models that can support these recommendations. 
+Several technologies have enabled the creation of hardware, learning modes and interactive spaces. Over the last 20 years, we have observed progress in hardware computing power, tracking of elements in real-time (such has hand, object tracking) and in authoring AR tools, plug-ins and applications. These technologies are already seen and applied in several settings such as in tourism \cite{kounavis2012enhancing}, learning \cite{santos2013augmented}, manufacturing \cite{thomas1992augmented}, pilot training \cite{macchiarella2004augmented} and many others. As a first goal, this paper aims to review the different trends and categories that have improved AR experiences with special emphasis to the piano. Even though there have been several AR piano prototypes in current literature, we believe that only a few are developed with focus on improving how piano novices learn (and towards having sustainable, meaningful learning experiences). The different novel contributions in piano AR have been measured to be effective based on several metrics such as registration speed, quality of graphics, and observed learner performance. These studies have been written with a distinct context in mind. As such, replicating these studies will depend on various factors such as: accessibility of required hardware, difficulty of recreating assets, available open-source libraries and willing participants for user studies. As a second goal, we intend to guide researchers on possible directions towards introducing novel contributions in AR piano prototypes. We shall do this by summarizing the state-of-the-art implementation and evaluation of included literature. Then, we enumerate recommendations for learning piano with AR and discuss relevant innovations and models that can support these recommendations. 
 
-\subsection{Organization}
 The paper is organized as follows: Section \ref{sec: bg}  discusses our definition of Augmented Reality (AR) piano prototypes and a background on the piano learning process. Section \ref{sec: method} describes our methods for qualitative analysis. Section \ref{sec: trends} discusses the results of our analysis of the trends in AR piano prototypes designed throughout the years. These include state-of-the-art contributions (in the design, engineering and content). We organise these strategies into categories such as hand tracking, visualisations, agents and tutors, and learning modes and discuss each of them in Section \ref{sec: strat}. Lastly, Section \ref{sec: discuss} concludes this paper with our recommendation for future AR piano prototypes. 
 
 \section{Background}
@@ -181,15 +179,15 @@ The search included journal articles, conference proceedings and other articles 
 \label{subsec: criteria}
 The focus of this survey is on AR piano prototypes. We needed to further filter these articles based on the following criteria:
 \begin{enumerate}
-    \item The research paper discusses an AR piano prototype 
-    \item The AR piano prototype is meant for playing, learning or teaching the piano
-    \item The prototype has a component that makes it qualified as augmented reality
+    \item The paper discusses a prototype with the AR piano in focus.  
+    \item The AR piano prototype is meant for playing, learning or teaching the piano.
+    \item The prototype fits the description of augmented reality as seen in Section \ref{sec: bg}.
     %\item The full research paper is publicly accessible 
 \end{enumerate}
-These inclusion criteria were manually done at the best judgment of the author. Following this criteria, we resulted to forty (40) articles. Moreover, not all these prototypes immediately qualify based on the definition of AR. Prototypes that make use of both 2D and 3D are considered. Prototypes that simulate the effect of AR even if they do not implement the tracking of an object were also included in this review. 
+These inclusion criteria were manually performed at the best judgment of the author. Following this criteria, we resulted to forty (40) articles. Moreover, not all these prototypes immediately qualify based on the definition of AR. Prototypes that make use of both 2D and 3D are considered. Prototypes that simulate the effect of AR even if they do not implement the tracking of an object were also included in this review. 
 
 \subsection{Qualitative Analysis}
-We performed a qualitative analysis of the different papers retried after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 40 articles do not represent 40 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype.
+We performed a qualitative analysis of the different papers retrieved after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 40 articles do not represent 40 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype.
 
 \subsection{Data Gathering}
 A form was drafted to facilitate the gathering of data from the 40 included articles. The form seeks to retrieve the following information: 
@@ -204,10 +202,8 @@ The publication details include the title of the paper, year of publication, aut
 
 The review was designed to easily recognize common trends among the papers included in this study. Data and findings were sorted towards supporting any form of further data gathering. Note that the goal is not to correctly describe which prototype is an AR piano or not but to gather enough examples of prototypes that have effectively used AR as a technique in playing or learning the piano.  
 
-\section{Trends in AR Piano Prototypes}
-\label{sec: trends}
-\begin{table}[]
-\caption{Table of studies and a checklist of their features based on contribution categories as described in section \ref{tab: all}. Legend: \textbf{\#}= number of citations; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
+\begin{table}[t]
+\caption{Table of studies and a checklist of their features based on contribution categories as described in section \ref{sec: trends}. Legend: \textbf{\#}= number of citations; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
 \small\begin{tabular}{llrrccccccl}
 \hline \hline
 \textbf{Paper} & \textbf{Author} & \textbf{Year} & \textbf{\#} & \textbf{KB} & \textbf{AT} & \textbf{PR} & \textbf{US} & \textbf{HT} & \textbf{LM} & \textbf{Others} \\ \hline
@@ -265,82 +261,79 @@ P40   & \citet{xu20195}                     & 2019 & 0          &           & \d
 \end{tabular}
 \end{table}
 
+\section{Trends in AR Piano Prototypes}
+\label{sec: trends}
 Forty (40) articles discussing AR piano prototypes have been evaluated and reviewed in this paper. The data collected about these papers can be found in Table \ref{tab:overview}. Following the qualitative analysis and the data gathering that took place, we were able to come up with AR contribution categories for piano learning. These are (1) \textbf{KB}: an AR keyboard that is seen by or displayed to the users for them to \textit{"press"}; (2) \textbf{AT}: an AR agent or tutor that is designed to help the user play the piano; (3) \textbf{PR}: refers to the piano roll and other similar visualizations, guiding the users on what keys to  \textit{"press"} in the piano; (4) \textbf{US}: a form of evaluation with the users that intends to assess the usability of the AR piano prototype; (5) \textbf{HT}: use of hand tracking and similar technology to register, display and render graphics in space and (6) \textbf{LM}: refers to the set of interfaces and modes that the user can utilize in helping them learn the piano. These contributions were counted, marked and labeled as see in the table mentioned earlier. This provides the readers a simplified view of the contributions in AR piano prototypes. These data points were also sorted by year, by category type in order to visualize the trends that we have observed. The respective charts and graphs describing these trends can be found in Figure \ref{fig:doublechart}. From these figures, we show the rise and trends on AR prototypes within the last 2 decades. The most common contribution categories and how they are bundled together across the years can also be seen. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=15cm]{figures/doublechart.png}
+    \caption{Trends in AR piano prototypes. \textbf{Left:} Number of articles published on AR piano within the last two decades. \textbf{Right:} Trend of contribution categories on the AR piano papers published within the last two decades. We have used moving average to visualize the trends of the different contribution categories. }
+    \label{fig:doublechart}
+\end{figure}  
 
 The earliest prototype included in our systematic review was from the year 2005. However, while there have been patents and products filed as \textit{"augmented reality piano"} as early as the year 1998, these were not included in the review because of the inclusion criteria described in subsection \ref{subsec: criteria}. Also, details that allow the author to review these patents systematically were not easily-accessible.
 
 Between the years 2005 to 2010, along with the rise of mobile technologies and better phone cameras (especially the iPhone \cite{querashi2012apple}), a handful of studies have attempted to develop AR piano prototypes. These studies featured an virtual keyboard and piano roll notation that users can operate with. We can say that these contribution categories have been the earliest attempts to innovate piano learning with AR. We believe that the primary focus during these years, was to make piano learning exciting by introducing a \textit{"virtual"} keyboard that can be viewed anywhere. As the typical piano instrument is heavy and bulky, having augmented keyboards was the obvious and portable approach to begin with. As humans were slowly shifting from personal computing to mobile computing, the trend in piano learning was also headed towards the same direction.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=15cm]{figures/doublechart.png}
-    \caption{ \textbf{Left:} Number of articles published on AR piano within the last two decades. \textbf{Right:} Trend of contribution categories on the AR piano papers published within the last two decades. We have used moving average to visualize the trends of the different contribution categories. }
-    \label{fig:doublechart}
-\end{figure} 
-
 Between the years 2011 to 2015, an obvious rise of AR piano prototypes published can be seen. The most common contributions during this period was the piano roll visualization. As mobile devices and their cameras were getting more powerful during this period, we believe that the focus may have shifted from bringing the classical piano into the mobile, to making the virtual keyboard more usable. Thus, user studies have to be utilized in order to assess this. Beyond usability, excitement and engagement were also key factors that need to be considered by these studies. Researchers had to innovate and introduce various learning modes to possibly make these user studies more realistic, and their results more accurate in relation to piano learning. Various use-cases and scenarios were introduced in user studies done by these papers. Practice modes, improving fingering accuracy, gamification and even supporting persons with disabilities (PWD's) were introduced. It was also in this period that the earliest known prototype to employ hand tracking \cite{huang2011piano} technology was also published. The work by \citet{weing2013piano} uses piano roll visualizations, employs hand tracking algorithms and introduces a gamified approach to learning modes for the users. Early use of agents and tutors as an addition to the augmented interfaces of the users were first introduced as well in these period. Similar to piano roll and learning modes, employing agents and tutors were embedded as part of interfaces that went beyond mobile. 3D technology was conceptualized in the latter years of this period as well. The rise of the Kinect \cite{zhang2012microsoft} allowed human beings to interact beyond their mobile devices, moving freely in interactives surfaces and spaces. As such, hand and body tracking along with virtual tutors that \textit{"sit beside the learner"} were made possible with this technology. Some of these innovations pulled out the \textit{augmented} in mobile, and brought it to the ubiquitous arena of ambient interfaces. With the use of Kinect and advanced 3D projectors \cite{yang2012augmented}, previously-addressed problems on AR piano and spatial registration in the mobile, have to be addressed when they were ported into multidimensional spaces. 
 
 Between the years 2016 to 2020, ubiquitous technologies (such us 3D, 360$^{\circ}$, raspberry pi sensors, etc) have disrupted how contributions in AR piano have to be designed. Piano roll visualizations, virtual keyboards and virtual agents have also been ported virtually-everywhere. As spatial registration in multidimensional space has been slowly addressed \cite{roberts2011spatial,novotny2013applications, billinghurst2008tangible} and applied in various environments, focus have shifted as well from mobile AR to tangible AR. Since keyboards, piano roll visualizations and agents can be displayed anywhere thanks to these innovations, humans still required tactile or haptic feedback when learning the piano. This was observed in the study of \citet{hamam2013effect} where he investigated on the kinesthetic and tactile feedback in relation to the quality of the learning experience in using digital tools. Because AR piano technologies should not replace the classical piano, but rather augment the learning experience \cite{yang2020modern}, prototypes have to be developed in a way that makes the learning experience as similar to the actual piano as possible. This entails having or feeling the sensation as if the user is playing with the real piano. This again shifted the trend from having a virtual keyboard to having piano roll visualizations that guide the user on how to press piano keys. Hand tracking technologies played a role in ensuring key and user press accuracy, rather than matching virtual keys with user presses. These piano prototypes have moved as well from individual learning experiences to enabling remote, virtual or even multi-user collaboration. However, these prototypes did not have piano learning as a focus. Instead they emphasized on piano performances which we consider as out of scope or beyond novice piano learning. 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=15cm]{figures/xiaomrror2011.png}
-    \caption{The work of \citet{xiao2011duet} introduced a virtual piano duet-partner that helped the piano learner in terms of pressing accuracy, posture, and sheet notation interpretation. In this photo, the learner....  }
-    \label{fig:xiaomirror2011}
-\end{figure}
 
 \section{Strategies in Designing AR Pianos}
 \label{sec: strat}
 
 This section discusses the novel contributions on AR piano prototypes based on the categories presented in Section \ref{sec: trends}. These innovations will be discussed in detail based on how they have improved in recent years, how they have been utilized in relation to the shift of focus from mobile to ubiquitous to tangible, and how they have improved learning experiences throughout the years. We reiterate again that even if there are forty (40) papers included in this review, these do not necessarily mean that there are 40 prototypes as well. In fact, some of the works illustrate incremental improvements of the same prototype throughout the years. 
-\subsection{Hand Tracking}
-\label{subsec: ht}
-Im still studying HT. prolly last that I will write
 
-\begin{figure}
-    \centering
-    \includegraphics[width=15cm]{figures/lianghandtrack.png}
-    \caption{\cite{liang2016barehanded} }
-    \label{fig:lianghandtrack}
-\end{figure}
-
-\subsection{Visualisations}
-\label{subsec: viz}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=15cm]{figures/takegawapianoroll.png}
-    \caption{Piano roll visualizations as seen in the prototype described by \citet{takegawa2012piano}. These visualizations are shown from a projector overlaid exactly on top of an actual keyboard. The falling visual cues aid the user in the right timing and proper placing of the fingers and keys.}
-    \label{fig:takegawapianoroll}
-\end{figure}
-
-Piano roll visualizations in AR are music visualizations that novice players can use. They serve as an easier representation to read complex music sheet notation, enabling novice users to quickly learn the piano \cite{walder2016modelling}. In this approach, the learning curve is reduced as novices need not to learn (yet) complex music notation and can focus on proper finger positioning, placement and accuracy. These visualizations usually come in polyphonic form to represent multiple melodies that take place in the same concurrent time segment \cite{ciuha2010visualization}.  Piano rolls have been used as well such for the guitar \cite{biamonte2010musical}, drum \cite{rossignol2015alternate} and many others. 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=15cm]{figures/daspiano.png}
-    \caption{The AR piano prototype described in the work of \citet{das2017music}. In this mixed reality setup, users wear a headmounted display where they see piano roll visualizations by the edge of the keyboard thereby guiding the users on what specific keys to press. An agent performer is also seen to entertain the piano player, moving depending on the rhythm provided. }
-    \label{fig:daspiano}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=15cm]{figures/arpianotrujano.png}
-    \caption{\cite{trujano2018arpiano} }
-    \label{fig:View from the HeadMounted}
-\end{figure}
-
-\subsection{Agents and Tutors}
+\subsection{Agents and tutors}
 \label{subsec: agent}
 Section discussing prototype whose main contributions focused on virtual agents/tutors
 
-\subsection{Evaluation Techniques}
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=15cm]{figures/xiao.png}
+    \caption{Featured prototypes that use agents and tutors. \textbf{Top left:} MirrorFugue I: piano duet prototype where a tutor sits across the learner. A camera is setup on top of the hands of the tutor. This is fed and viewed into a projection that is seen by the learner positioned just above the keys of the learner. \cite{xiao2010mirrorfugue}. The goal of this prototype to communicate proper hand gestures but with collaboration as the focus. \textbf{Top right:} MirrorFugue III: this prototype \cite{xiao2013mirrorfugue} projects (they used the word \textit{"conjures"} instead of projects) a recorded pianist instead of a live pianist used in \cite{xiao2010mirrorfugue}. In this setup, it focuses on teaching the learner to press the right keys similar to that of an expert pianist as seen in the projection. \textbf{Middle:} The concept photo for the proposed interface done in the work of \cite{xiao2010mirrorfugue}. It introduces the shadow mode, the mirror mode opposite the learner and the mirror mode beside the learner. This explores the different modes on which position and posture of the visualization will fit best in teaching the right finger positioning and timing in pressing.  \textbf{Bottom:} Andante: the latest incremental improvement in the Mirrofugue series, which uses creating and dancing animations as projections instead of a the virtual pianist, as piano roll representations. The movements and steps shown by the animated figures guide the user on the tempo and the right keys to press in the piano. }
+    \label{fig:xiao}
+\end{figure}
+
+\subsection{Piano roll and other visualisations}
+\label{subsec: viz}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{figures/dashuang.png}
+    \caption{Stationary piano roll visualizations in head-mounted displays. \textbf{Left:} The AR piano prototype described in the work of \citet{das2017music}. In this mixed reality setup, users wear a headmounted display where they see piano roll visualizations by the edge of the keyboard thereby guiding the users on what specific keys to press. An agent performer is also seen to entertain the piano player, moving depending on the rhythm provided. \textbf{Right:} The AR piano prototype described in the work of \citet{huang2011piano}. A user wears a head-mounted display while operating a real piano. The mobile device in the head-mounted display sees the piano and renders graphics on top of the keys, guiding the user on which key to press. Both of these visualizations are stationary.  }
+    \label{fig:dashuang}
+\end{figure}
+
+The most cited difficulty in learning how to play the piano is the learning curve introduced by the music sheet notation. This is why a popular approach to for this problem is to use interactive piano roll visualizations. Piano roll visualizations in AR are music visualizations that novice players can use. They serve as an easier representation to read complex music sheet notation, enabling novice users to quickly learn the piano \cite{walder2016modelling}. In this approach, the learning curve is reduced as novices need not to learn (yet) complex music notation and can focus on proper finger positioning, placement and accuracy. These visualizations usually come in polyphonic form to represent multiple melodies that take place in the same concurrent time segment \cite{ciuha2010visualization}.  Piano rolls have been used as well such for the guitar \cite{biamonte2010musical}, drum \cite{rossignol2015alternate} and many others. It is important to note that piano roll visualizations do not necessarily mean they are visualizations for piano. But rather, they represent a group of visualizations that move and unveil sound information as the visualizations are revelead, similar to the traditional piano roll music box. In general, piano roll visualizations refer to a group of visualizations that behave similarly with movie credits, rhythm games and many others. 
+
+
+Piano roll visualizations are designed to guide users on which key to press at the right time. This gives the spatiotemporal component (\textit{spatio} - position in multidimensional space, and \textit{temporal} - movement with consideration of time as the major element) depending on the platform and environment where they are implemented. The graphics are usually overlaid near or on top of the piano keys, moving (either be downwards or sideways depending on the target) towards the button that the user should press. 
+
+These visualizations used for AR prototypes have appeared in different forms. AR piano prototypes that are mobile-based or that may need a head-mounted display would render their piano roll visualizations to show as if they were on top of a real piano. On most cases, these visualizations appear on top of the piano keys seen through the camera of the mobile device (see Fig \ref{fig:dashuang}). Some of them are stationary and do not move, serving only as visual stimuli waiting for the user to input and press the key below them. Some visualizations are non-stationary, actively moving towards the keys to press, based on a given song's tempo (see Fig \ref{fig:caitrujano} Left ). Some of them have been found on AR prototypes where they display piano roll visualizations outside of the mobile device or head-mounted display. These AR piano prototypes have been designed to display visualizations in wider spaces through a 3D projector or specialized cameras like the Kinect. These moving visualizations denote extra meaning, sometimes sending additional feedback to the users. They may appear in a given color (usually blue or any neutral color) to denote that they should be pressed next (or soon). Then they appear in a different color to denote the success of the pressing (green for good timing, yellow for somewhat delayed timing and red for missed or wrong key pressed) (see Fig \ref{fig:caitrujano} Right and Fig \ref{fig:projectors}). 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=15cm]{figures/caitrujano.png}
+    \caption{Moving piano roll visualizations in head-mounted displays. \textbf{Left}: The piano roll visualizations in the prototype by  \cite{trujano2018arpiano} uses a head-mounted display and uses a minimalist interface. Key visualizations appear in random colors and seem to come out of nowhere. As the graphics draw closer to their respective keys, they slowly fade. No feedback exists to show whether the keys pressed are correct or not.  \textbf{Right}: Preview of the architecture of the prototype described in \cite{cai2019design}. The prototype uses \textit{"intensity bars"} as piano roll visualizations that appear in two colors: red (now pressing) and green (next to press). These intensity bars are mapped directly with their equivalent note as seen in the music sheet. Virtual hands are displayed as well in helping the user position their hands. }
+    \label{fig:caitrujano}
+\end{figure}
+
+There are also specific types of piano roll visualizations that are non-stationary. These visualizations appear to move within a specific time frame giving the user the notion of temporality (see Fig \ref{fig:caitrujano}). As these visualizations move, they teach two things to the user: (1) knowing the right key to press at the right time and (2) mapping the complex music notation and their equivalent key press. Some of these piano roll visualizations have also been introduced in a gamified mode \cite{Weing:2013:PEI:2494091.2494113} which researchers believe allow learners to learn faster or easier. More on these learning modes will be discussed in subsection \ref{subsec: learn}. 
+
+It is interesting to note that piano roll visualizations used in AR piano prototypes have been consistent regardless of era. 
+
+
+
+\subsection{Evaluation techniques introduced through user studies}
 \label{subsec: eval}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
-\begin{table}[]
-\caption{Table of Studies from \ref{tab:overview} with user studies. This table provides an overview of their techniques, treatments and tools used.}
+\begin{table}[t]
+\caption{List of studies from Table \ref{tab:overview} with user evaluation (labelled as \textbf{US}). This table provides an overview of their techniques, treatments and tools used.}
 \label{tab: us-all}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lllllll} \hline \hline
@@ -374,48 +367,42 @@ done by studies on AR piano teaching systems (hypothesis based on cognition, rea
 
 \begin{figure}
     \centering
-    \includegraphics[width=15cm]{figures/xiaomirror3interfaces.png}
-    \caption{\cite{xiao2010mirrorfugue} }
-    \label{fig:xiaomirror3interfaces}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=15cm]{figures/xiaomirrorfugue3.png}
-    \caption{\cite{xiao2010mirrorfugue} }
-    \label{fig:xiaomirrorfugue3}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=7cm]{figures/caipiano.png}
-    \caption{\cite{cai2019designa} }
-    \label{fig:caipiano}
-\end{figure}
-
-\begin{figure}
-    \centering
     \includegraphics[width=7cm]{figures/gerryadept.png}
     \caption{\cite{gerry2019adept} }
     \label{fig:gerryadept}
 \end{figure}
 
 
+\subsection{Hand tracking}
+\label{subsec: ht}
+Im still studying HT. prolly last that I will write
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=15cm]{figures/lianghandtrack.png}
+    \caption{Different forms of hand tracking for the piano done in the work of \cite{liang2016barehanded}. It considers lighting and how a hand is placed on top of a white background (\textbf{first}), segments the hand based on image processing techniques (\textbf{second}), identifies joints and action points of the fingers in the (\textbf{third}) and its positioning in an augmented piano (\textbf{fourth}). }
+    \label{fig:lianghandtrack}
+\end{figure}
 
 
 
-
-
-\subsection{Learning Modes}
+\subsection{Learning modes}
 \label{subsec: learn}
 Section discussing prototype whose contributions focused on learning modes, emphasis on pedagogy and other learner-centric modes
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=15cm]{figures/projectors.png}
+    \caption{Projector-based visualizations.  \textbf{\#1}: The prototype by \cite{takegawa2012piano}. It utilizes a projector that displays the piano roll visualizations on top of an actual piano. The black keys in the piano have been recoloured to white. Specific colored visualizations appear on top of each keys guiding the user on what and when to press. A music notation sheet which is drawn with colored lines are mapped to the piano roll notations that overlay the piano keys. In their approach, the music sheet is transformed into lines, which point to piano roll visualizations that are overlaid on top of the keys that the users can press. \textbf{\#2}: The prototype in \cite{rogers2014piano} which uses a similar projection technique with that of Takegawa et al. However, their prototype introduces learning modes which change how the piano roll visualizations are displayed. Depending on the mode, the piano roll can move downwards similar to that of rhythm games, or like building blocks that are read from left to right. }
+    \label{fig:projectors}
+\end{figure}
 
 
 \section{Discussion and Future Directions}
 \label{sec: discuss}
 gaps in modelling? position near your thesis
 
-\section{Tables and Figures}
+
 Figure of number of participants per study by years, size of each bubble is relative to sizes of other bubbles and based on number of participants in a study. Sort per category 
 
 Table of AR piano teaching systems showing summary of survey
@@ -441,49 +428,6 @@ questionnaires
  %   \caption{View from the Head Mounted Piano AR  }
  %   \label{fig:View from the HeadMounted}
 %\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=7cm]{figures/piano}
-    \caption{\cite{rogers2014piano}}
-    \label{fig:rogers2014piano}
-\end{figure}
-
-
-
-
-
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=15cm]{figures/xiaoandante.png}
-    \caption{\cite{xiao2014andante} }
-    \label{fig:View from the HeadMounted}
-\end{figure}
-
-
-
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=7cm]{figures/xiaomirrorfugue3.png}
-    \caption{\cite{xiao2013mirrorfugue} }
-    \label{fig:xiao2013mirror}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=7cm]{figures/zaqoutfingerpiano.png}
-    \caption{\cite{zaqout2015augmented} }
-    \label{fig:zaqoutfingerpiano}
-\end{figure}
-
-
-
-
-
 
 \begin{figure}
     \centering
