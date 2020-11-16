@@ -147,20 +147,15 @@ In the past 500 years, most acoustic musical instruments have matured and became
 As these innovations are presented, changes in the way humans use the musical instruments such as the piano also take place. This is because of the affordances affecting users that go with these technologies. For example, using an acoustic piano would involve fixing your posture, proper positioning of the fingers (keys) and feet (pedals) and reading a music sheet as playing guide. In using a digital keyboard, users also need to setup power supply of the device, connection to a computer and other peripherals (when recording) and enabling or disabling specific modes such as practice modes with lighted key that guide users in key press, a playback mechanism and other features of its digital interface. It is important to note that these innovations changed how experienced users play these instruments (in terms of self expression, music recording and sharing), but may have not necessarily-aided in the learning process of novice users \cite{bown2009understanding}. This has opened newer avenues and opportunities to augment the piano with the novice user as the main focus. Just in the recent two decades, augmentations have been introduced to help novices in this process. These augmentations ranged from auxiliary hardware and peripherals (actuators, resonators, magnets), user software modes (practice, listening modes) and audio and visual projections (virtual tutors and agents, piano roll visualizations). These augmentations also introduce newer affordances that play an important role in learning \citet{dede1996evolution}. Therefore, it is important to study how learning a musical instrument augmented with digital technology improve the learning experience. We would also explore how such innovations can be maximized to improve and sustain these these learning experiences with focus on the piano and digital keyboard. 
 
 As a first goal, this paper aims to review the different types of augmentations done on the piano (in this paper we shall simply-refer to these instruments as the piano). These contributions will be analyzed based on the type of augmentation and how this improves the piano learning experience for the novice user. We did a quick literature scan on digital libraries and repositories and we found out that augmented piano prototypes form a great number of papers published compared to other augmented musical instruments (such as the guitar, drum, flute, violin and many others). More details on these figures can be found in subsection \ref{subsec: search}. These augmentations and contributions have been designed with varying contexts in mind. As such, replicating these studies will depend on various factors such as accessibility of required hardware, difficulty of recreating assets, available open-source libraries and willing participants for user studies. Thus, as a second goal, we intend to guide our readers on future directions in introducing novel contributions in the augmented piano. We shall do this by summarizing and organizing these state-of-the-art contributions into categories. Then, we shall provide recommendations based on our discussion and relevant existing frameworks that support learning. 
-
-%different trends and categories that have improved AR experiences with special emphasis to the piano. Even though there have been several AR piano prototypes in current literature, we believe that only a few are developed with focus on improving how piano novices learn (and towards having sustainable, meaningful learning experiences). The different novel contributions in piano AR have been measured to be effective based on several metrics such as registration speed, quality of graphics, and observed learner performance. These studies have been written with a distinct context in mind. As such, replicating these studies will depend on various factors such as: accessibility of required hardware, difficulty of recreating assets, available open-source libraries and willing participants for user studies. As a second goal, we intend to guide researchers on possible directions towards introducing novel contributions in AR piano prototypes. We shall do this by summarizing the state-of-the-art implementation and evaluation of included literature. Then, we enumerate recommendations for learning piano with AR and discuss relevant innovations and models that can support these recommendations. 
+%different trends and categories that have improved AR experiences with special emphasis to the piano. Even though there have been several AR piano prototypes in current literature, we believe that only a few are developed with focus on improving how piano novices learn (and towards having sustainable, meaningful learning experiences). The different novel contributions in piano AR have been measured to be effective based on several metrics such as registration speed, quality of graphics, and observed learner performance. These studies have been written with a distinct context in mind. As such, replicating these studies will depend on various factors such as: accessibility of required hardware, difficulty of recreating assets, available open-source libraries and willing participants for user studies. As a second goal, we intend to guide researchers on possible directions towards introducing novel contributions in AR piano prototypes. We shall do this by summarizing the state-of-the-art implementation and evaluation of included literature. Then, we enumerate recommendations for learning piano with AR and discuss relevant innovations and models that can support these recommendations.
 
 The paper is organized as follows: Section \ref{sec: bg} provides the basics on piano learning and our definition of augmentation. Section \ref{sec: method} describes our methods for qualitative analysis. Section \ref{sec: trends} discusses the results of our analysis of the trends in augmented piano prototypes designed throughout the years. These include state-of-the-art contributions (in the design, engineering and content). We organise these strategies into categories such as hardware and peripheral, user interface modes and audio-visual projections that support learning (such as hand tracking, visualisations, agents and tutors) and discuss each of them in Section \ref{sec: strat}. Lastly, Section \ref{sec: discuss} concludes this paper with our recommendation for future augmented piano prototypes. 
 
 %One of these innovations is through Augmented Reality (AR). The earliest known prototype designed with AR came in the late 90s in the form of a musical keyboard display with keyboard input method \cite{breitweiser1996musical}. This along with other AR prototypes rode the waves of the Information era, with the boom of the World Wide Web, the emergence of the millennium bug, higher resolution graphics, stronger processors and better tracking algorithms among many others. Since then, as several AR piano prototypes have been developed, key innovations have shifted focus as well jumping from one technology to other (e.g. overlaying graphics to optimization to teaching modes). As these innovations shift focus from one to the other, human experiences are also reshaped by these changes. 
 
 %This introduction is not yet done. I need to elaborate the second and third question in the abstract. 
-
 %put this somewhere
 %Several technologies have enabled the creation of hardware, learning modes and interactive spaces. Over the last 20 years, we have observed progress in hardware computing power, tracking of elements in real-time (such has hand, object tracking) and in authoring AR tools, plug-ins and applications. These technologies are already seen and applied in several settings such as in tourism \cite{kounavis2012enhancing}, learning \cite{santos2013augmented}, manufacturing \cite{thomas1992augmented}, pilot training \cite{macchiarella2004augmented} and many others.
-
-
-
 
 \section{Background}
 \label{sec: bg}
@@ -175,7 +170,7 @@ Design Factors affecting augmented reality piano teaching systems (hardware, sof
 
 \section{Method}
 \label{sec: method}
-We did a literature review following the \textit{Preferred Reporting Items for Systematic Reviews and Meta-Analyses} technique, also known as \textbf{PRISMA} \cite{moher2009preferred}. The work of \citet{santos2013augmented} which has reviewed AR learning environments has applied PRISMA techniques as well. This guided us further on how to analyse and review AR prototypes for this specific context. The approach included a  qualitative-analysis phase that aims to review these innovations in a specific context. The steps performed in this systematic review is as follows: 
+We did a literature review following the \textit{Preferred Reporting Items for Systematic Reviews and Meta-Analyses} technique, also known as \textbf{PRISMA} \cite{moher2009preferred}. Since this paper performs a review with learning and augmentation as a focus, we also followed the techniques in the works of \cite{santos2013augmented, schneegass2016mobile, kljun2015transference, blattgerste2019augmented, mcpherson2015buttons, delgado2011state}.  This guided us further on how to analyse and review these augmented piano prototypes for this specific context. The approach included a  qualitative-analysis phase that aims to review these innovations in a specific context. The steps performed in this systematic review is as follows: 
 
 \subsection{Search for Prototypes}
 \label{subsec: search}
@@ -188,41 +183,77 @@ We did a literature search between March to October 2020 in several digital libr
     \item "augmented reality violin" OR "AR violin" OR "augmented violin"
     \item "augmented reality flute" OR "AR flute" OR "augmented flute"
 \end{enumerate}
-The search included journal articles, conference proceedings and other articles that are written in English. Some articles were not written in English but had available translations. These were included as well. A total of 1,206 articles were found from this initial search from these online libraries. There were 595 articles on piano and keyboard (49.3\% of the results), 156 on drum (12.9\% of the results), 187 on guitar (15.5\% of the results), 237 on violin (19.7\% of the results) and 31 on flute (2.6\% of the results). 
+The search included journal articles, conference proceedings and other articles that are written in English. Some articles were not written in English but had available translations. These were included as well. A total of 1,206 articles were found from this initial search from these online libraries. Not filtering duplicates, there were 595 articles on piano and keyboard (49.3\% of the results), 156 on drum (12.9\% of the results), 187 on guitar (15.5\% of the results), 237 on violin (19.7\% of the results) and 31 on flute (2.6\% of the results). 
+
 \subsection{Inclusion Criteria}
 \label{subsec: criteria}
-The focus of this survey is on augmented piano prototypes. We needed to further filter these articles based on the following criteria:
+Since the focus of this survey is on augmented piano prototypes and in relation with piano learning, we filtered these papers based on a specific inclusion criteria. This is described below: 
 \begin{enumerate}
     \item The paper discusses a prototype with the augmented piano as the main focus.  
     \item The augmented piano prototype is meant for playing, learning or teaching the piano.
     \item The prototype fits the description of \textit{augmented} as seen in Section \ref{sec: bg}.
 \end{enumerate}
-These inclusion criteria were manually performed at the best judgment of the author. Following this criteria, we resulted to forty (40) articles. Moreover, not all these prototypes immediately qualify based on the definition of AR. Prototypes that make use of both 2D and 3D are considered. Prototypes that simulate the effect of AR even if they do not implement the tracking of an object were also included in this review. 
+These inclusion criteria were manually performed at the best judgment of the authors. Following this criteria, we resulted to sixty-two (62) articles. These papers discussed the design and evaluation of augmented piano prototypes. There are number of studies that described an augmented piano equipped with an auxiliary peripheral (meant for other purposes such as determining user posture using motion-capture cameras) but these were filtered out as well as it does not fit the first and second bullets in the criteria mentioned above.  
 
 \subsection{Qualitative Analysis}
-We performed a qualitative analysis of the different papers retrieved after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 40 articles do not represent 40 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype.
+We performed a qualitative analysis of the different papers retrieved after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 62 articles do not represent 62 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype.
 
 \subsection{Data Gathering}
 \label{subsec: gathering}
-A form was drafted to facilitate the gathering of data from the 40 included articles. The form seeks to retrieve the following information: 
+A form was drafted to facilitate the gathering of data from the 62 included articles. The form seeks to retrieve the following information: 
 \begin{enumerate}
     \item publication details
     \item contributions
-    \item use of AR
+    \item type of augmentation
     \item citation count
     \item design and results of the user study
 \end{enumerate}
-The publication details include the title of the paper, year of publication, authors etc. The contributions of each paper were extracted and analyzed as well. The use of AR refers to the set of features that describe its AR component. This can refer to as head-mounted, agent-based, mobile, etc. The design and results of the user study refer to the description of applicable user studies and tests. Other features include sample size, method, questionnaire and tools used to conduct the user tests.
+The publication details include the title of the paper, year of publication, authors etc. The contributions of each paper were extracted and analyzed as well. The use of augmentation refers to the set of features that were added into the piano - either hardware, software or both. The design and results of the user study refer to the description of applicable user studies and tests. Other features include sample size, method, questionnaire and tools used to conduct the user tests.
 
-The review was designed to easily recognize common trends among the papers included in this study. Data and findings were sorted towards supporting any form of further data gathering. Note that the goal is not to correctly describe which prototype is an AR piano or not but to gather enough examples of prototypes that have effectively used AR as a technique in playing or learning the piano.  
+The review was designed to easily recognize common trends among the papers included in this study. Note that the goal is not to correctly describe which prototype is an augmented piano or not, but rather to gather enough examples of pianos that have been effectively-augmented towards playing or learning the piano.  
 
 \section{Trends in Augmented Piano Prototypes}
 
-
 \subsection{Trends in Non-AR augmented Piano Prototypes}
+
+\begin{table*}[h]
+\caption{caption here}
+\label{tab:augmentedonly}
+\begin{tabular}{llrllllllll}
+\hline \hline
+\textbf{Paper} & \textbf{Author}                                        & \multicolumn{1}{l}{Year} & \# & GR & MG & AX & SN & PR & OS & Others \\ \hline
+P1             & \citet{ogata2017keyboard}             & 2017                     &    &                     &         &            &             &            &                 &        \\ \hline
+P2             & \citet{mcpherson20172012}             & 2017                     &    &                     &         &            &             &            &                 &        \\ \hline
+P3             & \citet{mcpherson2013space}            & 2013                     &    &                     &         &            &             &            &                 &        \\ \hline
+P4             & \citet{mcpherson2011multidimensional} & 2011                     &    &                     &         &            &             &            &                 &        \\ \hline
+P5             & \citet{hadjakos2012pianist}           & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline
+P6             & \citet{nicolls2012gesturally}         & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline
+P7             & \citet{fontana2015designing}          & 2015                     &    &                     &         &            &             &            &                 &        \\ \hline
+P8             & \citet{chiang2015oncall}              & 2015                     &    &                     &         &            &             &            &                 &        \\ \hline
+P9             & \citet{gillian2012gesturally}         & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline
+P10            & \citet{liang2017piano}                & 2017                     &    &                     &         &            &             &            &                 &        \\ \hline
+P11            & \citet{granieri2019reach}             & 2019                     &    &                     &         &            &             &            &                 &        \\ \hline
+P12            & \citet{turchet2018some}               & 2018                     &    &                     &         &            &             &            &                 &        \\ \hline
+P13            & \citet{mcpherson2010toward}           & 2010                     &    &                     &         &            &             &            &                 &        \\ \hline
+P14            & \citet{santiniaugmented}              & 2020                     &    &                     &         &            &             &            &                 &        \\ \hline
+P15            & \citet{yang2013visual}                & 2013                     &    &                     &         &            &             &            &                 &        \\ \hline
+P16            & \citet{mcpherson2013portable}         & 2013                     &    &                     &         &            &             &            &                 &        \\ \hline
+P17            & \citet{dahlstedt2015mapping}          & 2015                     &    &                     &         &            &             &            &                 &        \\ \hline
+P18            & \citet{xu20195}                       & 2019                     &    &                     &         &            &             &            &                 &        \\ \hline
+P19            & \citet{zandt2014piaf}                 & 2014                     &    &                     &         &            &             &            &                 &        \\ \hline
+P20            & \citet{mcpherson2010augmenting}       & 2010                     &    &                     &         &            &             &            &                 &        \\ \hline
+P21            & \citet{yang2012augmented}             & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline
+P22            & \citet{p2012problem}                  & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline \hline
+\end{tabular}
+\caption*{Legend: \textbf{\#}= number of citations; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
+\end{table*}
+
+jojo
+
+
 \subsection{Trends in AR Piano Prototypes}
 \begin{table*}[h]
-\caption{Table of studies and a checklist of their features based on contribution categories as described in section \ref{sec: trends}.}
+\caption{Table of AR piano prototype studies and a checklist of their features based on contribution categories as described in section \ref{sec: trends}.}
 %\small
 \begin{tabular}{llrrccccccl}
 \hline \hline
