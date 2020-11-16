@@ -193,14 +193,14 @@ Since the focus of this survey is on augmented piano prototypes and in relation 
     \item The augmented piano prototype is meant for playing, learning or teaching the piano.
     \item The prototype fits the description of \textit{augmented} as seen in Section \ref{sec: bg}.
 \end{enumerate}
-These inclusion criteria were manually performed at the best judgment of the authors. Following this criteria, we resulted to sixty-two (62) articles. These papers discussed the design and evaluation of augmented piano prototypes. There are number of studies that described an augmented piano equipped with an auxiliary peripheral (meant for other purposes such as determining user posture using motion-capture cameras) but these were filtered out as well as it does not fit the first and second bullets in the criteria mentioned above.  
+These inclusion criteria were manually performed at the best judgment of the authors. Following this criteria, we resulted to sixty-three (63) articles. These papers discussed the design and evaluation of augmented piano prototypes. There are number of studies that described an augmented piano equipped with an auxiliary peripheral (meant for other purposes such as determining user posture using motion-capture cameras) but these were filtered out as well as it does not fit the first and second bullets in the criteria mentioned above.  
 
 \subsection{Qualitative Analysis}
-We performed a qualitative analysis of the different papers retrieved after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 62 articles do not represent 62 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype.
+We performed a qualitative analysis of the different papers retrieved after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 63 articles do not represent 63 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype.
 
 \subsection{Data Gathering}
 \label{subsec: gathering}
-A form was drafted to facilitate the gathering of data from the 62 included articles. The form seeks to retrieve the following information: 
+A form was drafted to facilitate the gathering of data from the 63 included articles. The form seeks to retrieve the following information: 
 \begin{enumerate}
     \item publication details
     \item contributions
@@ -217,41 +217,85 @@ The review was designed to easily recognize common trends among the papers inclu
 \subsection{Trends in Non-AR augmented Piano Prototypes}
 
 \begin{table*}[h]
-\caption{caption here}
+\caption{Table of augmented piano prototype studies and a checklist of their features based on contribution categories as described in section \ref{sec: trends}.}
 \label{tab:augmentedonly}
-\begin{tabular}{llrllllllll}
-\hline \hline
-\textbf{Paper} & \textbf{Author}                                        & \multicolumn{1}{l}{Year} & \# & GR & MG & AX & SN & PR & OS & Others \\ \hline
-P1             & \citet{ogata2017keyboard}             & 2017                     &    &                     &         &            &             &            &                 &        \\ \hline
-P2             & \citet{mcpherson20172012}             & 2017                     &    &                     &         &            &             &            &                 &        \\ \hline
-P3             & \citet{mcpherson2013space}            & 2013                     &    &                     &         &            &             &            &                 &        \\ \hline
-P4             & \citet{mcpherson2011multidimensional} & 2011                     &    &                     &         &            &             &            &                 &        \\ \hline
-P5             & \citet{hadjakos2012pianist}           & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline
-P6             & \citet{nicolls2012gesturally}         & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline
-P7             & \citet{fontana2015designing}          & 2015                     &    &                     &         &            &             &            &                 &        \\ \hline
-P8             & \citet{chiang2015oncall}              & 2015                     &    &                     &         &            &             &            &                 &        \\ \hline
-P9             & \citet{gillian2012gesturally}         & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline
-P10            & \citet{liang2017piano}                & 2017                     &    &                     &         &            &             &            &                 &        \\ \hline
-P11            & \citet{granieri2019reach}             & 2019                     &    &                     &         &            &             &            &                 &        \\ \hline
-P12            & \citet{turchet2018some}               & 2018                     &    &                     &         &            &             &            &                 &        \\ \hline
-P13            & \citet{mcpherson2010toward}           & 2010                     &    &                     &         &            &             &            &                 &        \\ \hline
-P14            & \citet{santiniaugmented}              & 2020                     &    &                     &         &            &             &            &                 &        \\ \hline
-P15            & \citet{yang2013visual}                & 2013                     &    &                     &         &            &             &            &                 &        \\ \hline
-P16            & \citet{mcpherson2013portable}         & 2013                     &    &                     &         &            &             &            &                 &        \\ \hline
-P17            & \citet{dahlstedt2015mapping}          & 2015                     &    &                     &         &            &             &            &                 &        \\ \hline
-P18            & \citet{xu20195}                       & 2019                     &    &                     &         &            &             &            &                 &        \\ \hline
-P19            & \citet{zandt2014piaf}                 & 2014                     &    &                     &         &            &             &            &                 &        \\ \hline
-P20            & \citet{mcpherson2010augmenting}       & 2010                     &    &                     &         &            &             &            &                 &        \\ \hline
-P21            & \citet{yang2012augmented}             & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline
-P22            & \citet{p2012problem}                  & 2012                     &    &                     &         &            &             &            &                 &        \\ \hline \hline
-\end{tabular}
-\caption*{Legend: \textbf{\#}= number of citations; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
+\resizebox{!}{.3\paperheight}{%
+\begin{tabular}{ll|l|r|c|c|c|c|c|c|c|c|c|c|c|c|l} \hline \hline
+\textbf{Paper} & \textbf{Author}                                        & Year & \# & \textbf{GR} & \textbf{MG} & \textbf{AX} & \textbf{SN} & \textbf{PR} & \textbf{OS} & \textbf{KB} & \textbf{AT} & \textbf{PR} & \textbf{US} & \textbf{HT} & \textbf{LM} &  \textbf{Others} \\ \hline
+P1             & \citet{ogata2017keyboard}             & 2017                     &    &                     &         &            &             &            &                 &       &&&&&& \textit{this is the longest text that i can think of } \\ \hline
+P2             & \citet{mcpherson20172012}             & 2017                     &    &                     &         &            &             &            &                 &       &&&&&& \\ \hline
+P3             & \citet{mcpherson2013space}            & 2013                     &    &                     &         &            &             &            &                 &       &&&&&& \\ \hline
+P4             & \citet{mcpherson2011multidimensional} & 2011                     &    &                     &         &            &             &            &                 &       &&&&&& \\ \hline
+P5             & \citet{hadjakos2012pianist}           & 2012                     &    &                     &         &            &             &            &                 &     &&&&&&   \\ \hline
+P6             & \citet{nicolls2012gesturally}         & 2012                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P7             & \citet{fontana2015designing}          & 2015                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P8             & \citet{chiang2015oncall}              & 2015                     &    &                     &         &            &             &            &                 &       &&&&&& \\ \hline
+P9             & \citet{gillian2012gesturally}         & 2012                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P10            & \citet{liang2017piano}                & 2017                     &    &                     &         &            &             &            &                 &     &&&&&&   \\ \hline
+P11            & \citet{granieri2019reach}             & 2019                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P12            & \citet{turchet2018some}               & 2018                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P13            & \citet{mcpherson2010toward}           & 2010                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P14            & \citet{santiniaugmented}              & 2020                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P15            & \citet{yang2013visual}                & 2013                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P16            & \citet{mcpherson2013portable}         & 2013                     &    &                     &         &            &             &            &                 &     &&&&&&   \\ \hline
+P17            & \citet{dahlstedt2015mapping}          & 2015                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P18            & \citet{xu20195}                       & 2019                     &    &                     &         &            &             &            &                 &     &&&&&&   \\ \hline
+P19            & \citet{zandt2014piaf}                 & 2014                     &    &                     &         &            &             &            &                 &     &&&&&&   \\ \hline
+P20            & \citet{mcpherson2010augmenting}       & 2010                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P21            & \citet{yang2012augmented}             & 2012                     &    &                     &         &            &             &            &                 &     &&&&&&   \\ \hline
+P22            & \citet{p2012problem}                  & 2012                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
+P23    & \citet{huang2011piano}              & 2011 & 50         & &&&&&&  \ding{51} &           &           &           & \ding{51} &           & \\ \hline
+P24    & \citet{nugraha2014pemanfaatan}      & 2014 & 38         & &&&&&& \ding{51} &           &           & \ding{51} &           &           & \\ \hline
+P25    & \citet{barakonyi2005augmented}      & 2005 & 47         & &&&&&& \ding{51} & \ding{51} & \ding{51} &           &           & \ding{51} & \\ \hline
+P26    & \citet{chow2013music}               & 2013 & 45         & &&&&&& \ding{51} &           & \ding{51} & \ding{51} &           & \ding{51} & \\ \hline
+P27    & \citet{weing2013piano}              & 2013 & 29         & &&&&&&          &           & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \textit{they used visualizations in a gamified approach}\\ \hline
+P28    & \citet{hackl2017holokeys}           & 2017 & 7          & &&&&&& \ding{51} &           & \ding{51} &           &           &           & \\ \hline
+P29    & \citet{chouvatut2013virtual}        & 2013 & 8          & &&&&&& \ding{51} &           & \ding{51} &           &           &           & \textit{supports the rehabilitation of PWD's}\\ \hline
+P30    & \citet{fernandez2016piano}          & 2016 & 7          &  &&&&&&         & \ding{51} & \ding{51} &           &           &           & \\ \hline
+P31    & \citet{das2017music}                & 2017 & 5          & &&&&&& \ding{51} & \ding{51} & \ding{51} &           &           & \ding{51} & \textit{has a specific lesson builder module independent of other modes} \\ \hline
+P32   &  \citet{claudia2017yousician}       & 2017 & 0          & &&&&&&           &           & \ding{51} &           &           &           & \\ \hline
+P33   & \citet{trujano2018arpiano}          & 2018 & 4          & &&&&&& \ding{51} &           & \ding{51} &           &           &           & \\ \hline
+P34   & \citet{kerdvibulvech2017innovative} & 2017 & 4          &  &&&&&&\ding{51} &           &           & \ding{51} & \ding{51} &           & \textit{users gesture on air like piano air keys}\\ \hline
+P35   & \citet{oka2013marker}               & 2013 & 27         &  &&&&&&         &           &           &           & \ding{51} &           & \textit{piano fingering}\\ \hline
+P36   &  \citet{liang2016barehanded}        & 2016 & 20         & &&&&&& \ding{51} &           &           &           & \ding{51} &           & \\ \hline
+P37   & \citet{schmalstieg2007experiences}  & 2007 & 268        & &&&&&&          &           & \ding{51} & \ding{51} &           &           & \\ \hline
+P38 & \citet{correa2009computer}          & 2009 & 63         & &&&&&& \ding{51} &           & \ding{51} & \ding{51} &           &           & \textit{patients w/ cerebral palsy}\\ \hline
+P39   & \citet{xiao2014andante}             & 2014 & 28         &   &&&&&&         & \ding{51} & \ding{51} &           &           & \ding{51} & \\ \hline 
+P40   & \citet{takegawa2012piano}           & 2012 & 26         &  &&&&&&         &           & \ding{51} & \ding{51} &           & \ding{51} & \\ \hline 
+P41   & \citet{xiao2010mirrorfugue}         & 2011 & 31         & &&&&&&          & \ding{51} & \ding{51} & \ding{51} &           &           & \textit{3 unique interfaces}\\ \hline
+P42   & \citet{xiao2013mirrorfugue}         & 2013 & 17         &  &&&&&&         & \ding{51} &           & \ding{51} &           &           & \\ \hline
+P43   & \citet{li2018application}           & 2018 & 1          & &&&&&& \ding{51} &           &           & \ding{51} &           &           & \\ \hline 
+P44   & \citet{zaqout2015augmented}         & 2015 & 1          & &&&&&& \ding{51} &           &           &           &           &           & \\ \hline 
+P45   & \citet{leonard2013virtual}          & 2013 & 9          & &&&&&& \ding{51} &           &           & \ding{51} &           &           & \\ \hline 
+P46   & \citet{raymaekers2014game}          & 2014 & 14         &  &&&&&&         &           & \ding{51} & \ding{51} &           & \ding{51} & \textit{shooting game}\\ \hline
+P47   & \citet{rogers2014piano}             & 2017 & 42         &   &&&&&&        &           & \ding{51} & \ding{51} &           & \ding{51} & \\ \hline
+P48 & \citet{birhanu2017keynvision}       & 2017 & 2          &  &&&&&&         &           & \ding{51} &           &           & \ding{51} & \\ \hline
+P49   & \citet{sun2018mr}                   & 2018 & 3          & &&&&&& \ding{51} &           & \ding{51} & \ding{51} &           &           & \textit{one and two hand modes}\\ \hline
+P50   & \citet{goodwin2013key}              & 2013 & 10         &  &&&&&&         & \ding{51} & \ding{51} &           &           &           & \\ \hline
+P51   & \citet{zeng2019funpianoar}          & 2019 & 2          &  &&&&&&         &           &           &           &           &           & \textit{used ar markers}\\ \hline
+P52   & \citet{de2014infrared}              & 2014 & 6          & &&&&&&\ding{51} &           &           &           & \ding{51} &           & \textit{magnetic glove}\\ \hline
+P53   & \citet{molloy2019mixed}             & 2019 & 1          &   &&&&&&        &           & \ding{51} & \ding{51} &           & \ding{51} & \textit{cognitive load, motivation}\\ \hline
+P54   & \citet{cai2019designa}               & 2019 & 1         &  &&&&&&         &           & \ding{51} &           &           & \ding{51} & \textit{formal \& competition mode}\\ \hline
+P55   & \citet{gerry2019adept}              & 2019 & 2          &  &&&&&&         & \ding{51} & \ding{51} &           & \ding{51} &           & \textit{leap motion capture}\\ \hline 
+P56   & \citet{zhang2010affordable}         & 2010 & 22         & &&&&&& \ding{51} &           &           &           &           &           & \\ \hline 
+P57   &  \citet{pan2018pilot}               & 2018 & 2          & &&&&&& \ding{51} &           &           & \ding{51} &           &           & \textit{single \& pair modes}\\ \hline
+P58   &  \citet{cai2019designb}              & 2019 & 0         & &&&&&&          &           & \ding{51} &           & \ding{51} &           & \textit{group piano}\\ \hline
+P59   & \citet{sandnes2019enhanced}         & 2019 & 0          &  &&&&&&         &           & \ding{51} &           &           &           & \\ \hline
+P60   & \citet{kim2014ar}                   & 2014 & 11         & &&&&&& \ding{51} &           & \ding{51} & \ding{51} &           &           & \\ \hline
+P61   &  \citet{xiao2011duet}               & 2011 & 7          &  &&&&&&          &           & \ding{51} & \ding{51} &           & \ding{51} & \textit{practice modes}\\ \hline 
+P62   & \citet{xu20195}                     & 2019 & 0          &  &&&&&&         & \ding{51} & \ding{51} &           &           & \ding{51} & \textit{self reflection}\\ \hline 
+P63   & \citet{karolus2020hit}                     & 2020 & 1          &  && \ding{51} & &&&         &  &  &           &           &  & \textit{EMG}\\ \hline 
+      &                                     &           & \textit{\={x}}=21 & &&&&&& 47\% & 22\% & 67\%    & 45\%      & 20\%      & 32\%      & \\ \hline \hline
+\end{tabular}%
+}
+\caption*{Legend: \textbf{\#}= number of citations; \textbf{GR}= Gesture Recognition; \textbf{MG}= magnets and resonators; \textbf{AX}= other auxiliary hardware and peripherals attched; \textbf{PR}= projections and visualizations; \textbf{OS}= optical scanners; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
 \end{table*}
 
 jojo
 
 
 \subsection{Trends in AR Piano Prototypes}
+\begin{comment}
 \begin{table*}[h]
 \caption{Table of AR piano prototype studies and a checklist of their features based on contribution categories as described in section \ref{sec: trends}.}
 %\small
@@ -312,6 +356,8 @@ P40   & \citet{xu20195}                     & 2019 & 0          &           & \d
 \end{tabular}
 \caption*{Legend: \textbf{\#}= number of citations; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
 \end{table*}
+\end{comment}
+
 \label{sec: trends}
 Forty (40) articles discussing AR piano prototypes have been evaluated and reviewed in this paper. The data collected about these papers can be found in Table \ref{tab:overview}. Following the qualitative analysis and the data gathering that took place, we were able to come up with AR contribution categories for piano learning. These are (1) \textbf{KB}: an AR keyboard that is seen by or displayed to the users for them to \textit{"press"}; (2) \textbf{AT}: an AR agent or tutor that is designed to help the user play the piano; (3) \textbf{PR}: refers to the piano roll and other similar visualizations, guiding the users on what keys to  \textit{"press"} in the piano; (4) \textbf{US}: a form of evaluation with the users that intends to assess the usability of the AR piano prototype; (5) \textbf{HT}: use of hand tracking and similar technology to register, display and render graphics in space and (6) \textbf{LM}: refers to the set of interfaces and modes that the user can utilize in helping them learn the piano. These contributions were counted, marked and labeled as see in the table mentioned earlier. This provides the readers a simplified view of the contributions in AR piano prototypes. These data points were also sorted by year, by category type in order to visualize the trends that we have observed. The respective charts and graphs describing these trends can be found in Figure \ref{fig:doublechart}. From these figures, we show the rise and trends on AR prototypes within the last 2 decades. The most common contribution categories and how they are bundled together across the years can also be seen. 
 
@@ -398,7 +444,7 @@ What separates HCI research from other disciplines is it properly gauge the impa
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table*}[t]
-\caption{List of studies with user evaluation (labelled as \textbf{US} as seen from Table \ref{tab:overview}). This table provides an overview of their treatments, metrics, constructs and tools used.}
+\caption{List of studies with user evaluation (labelled as \textbf{US} as seen from Table \ref{tab:augmentedonly}). This table provides an overview of their treatments, metrics, constructs and tools used.}
 \label{tab: us-all}
 \resizebox{\textwidth}{!}{%
 \small\begin{tabular}{lcllllll} \hline \hline
@@ -475,6 +521,9 @@ A \textit{listen (attention)} mode allows novices to observe and listen in a son
 Other modes of interaction have also been introduced to aid learning and other piano-related activities. Learning with a partner \cite{xiao2011duet}, performing with a group \cite{gerry2019adept} and learning with a group \cite{cai2019design}. Other AR piano prototypes also included a competitive mode \cite{cai2019designb} to encourage learners to perform better during piano practice. 
 
 \section{Discussion and Future Directions}
+Have a discussion here Jordan. how does this connect with piano learning? 
+Where is spatiotemporal pointing?
+can any of these consider proficiency aware systems? 
 \label{sec: discuss}
 %gaps in modelling? position near your thesis
 
