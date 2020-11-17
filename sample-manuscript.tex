@@ -213,8 +213,10 @@ The publication details include the title of the paper, year of publication, aut
 The review was designed to easily recognize common trends among the papers included in this study. Note that the goal is not to correctly describe which prototype is an augmented piano or not, but rather to gather enough examples of pianos that have been effectively-augmented towards playing or learning the piano.  
 
 \section{Trends in Augmented Piano Prototypes}
+\label{sec: trends}
 
-\subsection{Trends in Non-AR augmented Piano Prototypes}
+%\subsection{Trends in Non-AR augmented Piano Prototypes}
+
 
 \begin{table*}[h]
 \caption{Table of augmented piano prototype studies and a checklist of their features based on contribution categories as described in section \ref{sec: trends}.}
@@ -226,7 +228,7 @@ P1             & \citet{ogata2017keyboard}             & 2017                   
 P2             & \citet{mcpherson20172012}             & 2017                     &    &                     &         &            &             &            &                 &       &&&&&& \\ \hline
 P3             & \citet{mcpherson2013space}            & 2013                     &    &                     &         &            &             &            &                 &       &&&&&& \\ \hline
 P4             & \citet{mcpherson2011multidimensional} & 2011                     &    &                     &         &            &             &            &                 &       &&&&&& \\ \hline
-P5             & \citet{hadjakos2012pianist}           & 2012                     &    &                     &         &            &             &            &                 &     &&&&&&   \\ \hline
+P5             & \citet{hadjakos2012pianist}           & 2012                     &    &                     &         &            &             &   \ding{51}         &                 &     &&&&&&   \\ \hline
 P6             & \citet{nicolls2012gesturally}         & 2012                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
 P7             & \citet{fontana2015designing}          & 2015                     &    &                     &         &            &             &            &                 &      &&&&&&  \\ \hline
 P8             & \citet{chiang2015oncall}              & 2015                     &    &                     &         &            &             &            &                 &       &&&&&& \\ \hline
@@ -294,7 +296,7 @@ P63   & \citet{karolus2020hit}                     & 2020 & 1          &  && \di
 jojo
 
 
-\subsection{Trends in AR Piano Prototypes}
+%\subsection{Trends in AR Piano Prototypes}
 \begin{comment}
 \begin{table*}[h]
 \caption{Table of AR piano prototype studies and a checklist of their features based on contribution categories as described in section \ref{sec: trends}.}
@@ -358,8 +360,7 @@ P40   & \citet{xu20195}                     & 2019 & 0          &           & \d
 \end{table*}
 \end{comment}
 
-\label{sec: trends}
-Forty (40) articles discussing AR piano prototypes have been evaluated and reviewed in this paper. The data collected about these papers can be found in Table \ref{tab:overview}. Following the qualitative analysis and the data gathering that took place, we were able to come up with AR contribution categories for piano learning. These are (1) \textbf{KB}: an AR keyboard that is seen by or displayed to the users for them to \textit{"press"}; (2) \textbf{AT}: an AR agent or tutor that is designed to help the user play the piano; (3) \textbf{PR}: refers to the piano roll and other similar visualizations, guiding the users on what keys to  \textit{"press"} in the piano; (4) \textbf{US}: a form of evaluation with the users that intends to assess the usability of the AR piano prototype; (5) \textbf{HT}: use of hand tracking and similar technology to register, display and render graphics in space and (6) \textbf{LM}: refers to the set of interfaces and modes that the user can utilize in helping them learn the piano. These contributions were counted, marked and labeled as see in the table mentioned earlier. This provides the readers a simplified view of the contributions in AR piano prototypes. These data points were also sorted by year, by category type in order to visualize the trends that we have observed. The respective charts and graphs describing these trends can be found in Figure \ref{fig:doublechart}. From these figures, we show the rise and trends on AR prototypes within the last 2 decades. The most common contribution categories and how they are bundled together across the years can also be seen. 
+Sixty-three (63) articles discussing augmented piano prototypes have been evaluated and reviewed in this paper. The data collected about these papers can be found in Table \ref{tab:overview}. Following the qualitative analysis and the data gathering that took place, we were able to identify contribution categories found in these augmented pianos. These are (1) \textbf{KB}: an AR keyboard that is seen by or displayed to the users for them to \textit{"press"}; (2) \textbf{AT}: an AR agent or tutor that is designed to help the user play the piano; (3) \textbf{PR}: refers to the piano roll and other similar visualizations, guiding the users on what keys to  \textit{"press"} in the piano; (4) \textbf{US}: a form of evaluation with the users that intends to assess the usability of the AR piano prototype; (5) \textbf{HT}: use of hand tracking and similar technology to register, display and render graphics in space and (6) \textbf{LM}: refers to the set of interfaces and modes that the user can utilize in helping them learn the piano. These contributions were counted, marked and labeled as see in the table mentioned earlier. This provides the readers a simplified view of the contributions in AR piano prototypes. These data points were also sorted by year, by category type in order to visualize the trends that we have observed. The respective charts and graphs describing these trends can be found in Figure \ref{fig:doublechart}. From these figures, we show the rise and trends on AR prototypes within the last 2 decades. The most common contribution categories and how they are bundled together across the years can also be seen. 
 
 The earliest prototype included in our systematic review was from the year 2005. However, while there have been patents and products filed as \textit{"augmented reality piano"} as early as the year 1998, these were not included in the review because of the inclusion criteria described in subsection \ref{subsec: criteria}. Also, details that allow the author to review these patents systematically were not easily-accessible.
 
@@ -369,19 +370,32 @@ Between the years 2011 to 2015, an obvious rise of AR piano prototypes published
 
 Between the years 2016 to 2020, ubiquitous technologies (such us 3D, 360$^{\circ}$, raspberry pi sensors, etc) have disrupted how contributions in AR piano have to be designed. Piano roll visualizations, virtual keyboards and virtual agents have also been ported virtually-everywhere. As spatial registration in multidimensional space has been slowly addressed \cite{roberts2011spatial,novotny2013applications, billinghurst2008tangible} and applied in various environments, focus have shifted as well from mobile AR to tangible AR. Since keyboards, piano roll visualizations and agents can be displayed anywhere thanks to these innovations, humans still required tactile or haptic feedback when learning the piano. This was observed in the study of \citet{hamam2013effect} where he investigated on the kinesthetic and tactile feedback in relation to the quality of the learning experience in using digital tools. Because AR piano technologies should not replace the classical piano, but rather augment the learning experience \cite{yang2020modern}, prototypes have to be developed in a way that makes the learning experience as similar to the actual piano as possible. This entails having or feeling the sensation as if the user is playing with the real piano. This again shifted the trend from having a virtual keyboard to having piano roll visualizations that guide the user on how to press piano keys. Hand tracking technologies played a role in ensuring key and user press accuracy, rather than matching virtual keys with user presses. These piano prototypes have moved as well from individual learning experiences to enabling remote, virtual or even multi-user collaboration. However, these prototypes did not have piano learning as a focus. Instead they emphasized on piano performances which we consider as out of scope or beyond novice piano learning. 
 
-\section{Strategies in Designing AR Pianos}
+\section{Strategies in Designing Augmented Pianos}
 \label{sec: strat}
 
 \begin{figure*}[t]
     \centering
     \includegraphics[width=17cm]{figures/doublechart.png}
-    \caption{Trends in AR piano prototypes. \textbf{Left:} Number of articles published on AR piano within the last two decades. \textbf{Right:} Trend of contribution categories on the AR piano papers published within the last two decades. We have used moving average values to visualize the trends in these different contribution categories. }
+    \caption{THIS CHART NEEDS SOME REPLACEMENT: Trends in AR piano prototypes. \textbf{Left:} Number of articles published on AR piano within the last two decades. \textbf{Right:} Trend of contribution categories on the AR piano papers published within the last two decades. We have used moving average values to visualize the trends in these different contribution categories. }
     \label{fig:doublechart}
 \end{figure*}  
 
-This section discusses the novel contributions on AR piano prototypes based on the categories presented in Section \ref{sec: trends}. These innovations will be discussed in detail based on how they have improved in recent years, how they have been utilized in relation to the shift of focus from mobile to ubiquitous to tangible, and how they have improved learning experiences throughout the years. We reiterate again that even if there are forty (40) papers included in this review, these do not necessarily mean that there are 40 prototypes as well. In fact, some of the works illustrate incremental improvements of the same prototype throughout the years. 
+This section discusses the novel contributions by augmented piano prototypes based on the categories presented in Section \ref{sec: trends}. These innovations will be discussed in relation to the contributions that these augmentations may or may not have benefited piano learning. We reiterate again that even if there are sixty-three (63) papers included in this review, these do not necessarily mean that there are 63 prototypes as well. In fact, some of the works illustrate incremental improvements of the same prototype throughout the years. 
 
-\subsection{Agents and tutors}
+\subsection{Optical scanners to detect gesture, posture and user motion}
+\label{subsec: gesture}
+
+
+\subsection{Magnets and resonators for improved music quality}
+\label{subsec: magnets}
+
+
+\subsection{Auxiliary hardware and other attached peripherals}
+\label{subsec: auxiliary}
+
+.. merge OS and GR together
+
+\subsection{Augmented agents and tutors as novice guide}
 \label{subsec: agent}
 
 \begin{figure*}[t]
@@ -434,10 +448,10 @@ There are also specific types of piano roll visualizations that are non-stationa
 
 
 
-\subsection{Evaluation techniques introduced through user studies}
+\subsection{Newer techniques in assessing and evaluating augmented piano learners}
 \label{subsec: eval}
 
-Of the 40 papers included in this review, only 18 (45\% as seen in Table \ref{tab:overview}) have performed user studies on the system  as part of their contribution. These user studies evaluated certain factors such as ease of use, satisfaction, immersion, motivation and performance among many others. We believe that through the development of AR piano prototypes, techniques and methods on evaluating these factors have changed and improved as well. Following the data gathering techniques described in subsection \ref{subsec: gathering}, we reviewed these papers and analyzed how they did their user studies. We looked at their sample size, the type of their participants, the type of treatment, the metrics or constructs they measured and the tools/instruments they used to measure these metrics. In our review, we observed a shift of focus in treatment and metrics in the same way the shift in focus for visualizations and agents/tutors have taken place. 
+Of the 40 papers included in this review, only 18 (45\% as seen in Table \ref{tab:augmentedonly}) have performed user studies on the system  as part of their contribution. These user studies evaluated certain factors such as ease of use, satisfaction, immersion, motivation and performance among many others. We believe that through the development of AR piano prototypes, techniques and methods on evaluating these factors have changed and improved as well. Following the data gathering techniques described in subsection \ref{subsec: gathering}, we reviewed these papers and analyzed how they did their user studies. We looked at their sample size, the type of their participants, the type of treatment, the metrics or constructs they measured and the tools/instruments they used to measure these metrics. In our review, we observed a shift of focus in treatment and metrics in the same way the shift in focus for visualizations and agents/tutors have taken place. 
 
 What separates HCI research from other disciplines is it properly gauge the impact of the prototypes, systems into their human users. Specific human factors and affordances are usually discovered as these user studies are done. We begin looking at these evaluation techniques introduced with the participants involved and their respective size. The number of participants involved in these studies ranged from 1 to 74, with a median sample size of 8.5 (see Table \ref{tab: us-all}). These involved a combination of expert and novice users, people with or without background in using AR apps and tools. There was even one study who involved patients with disabilities as part of their respondents \cite{correa2009computer}. These studies considered various study designs from between-subject, within-subject, with or without control groups and many others. Since there are other contribution categories introduced by these papers, they have different focus in terms of treatment (see Table \ref{tab: us-all}). These were also depending on the year the studies were published from (either between 2005-2010, 2011-2015 or 2016-2020). Earlier studies tend to measure usability in consideration accuracy of spatial registration (such as marker detection). Newer studies focused on measuring activities where users are more free (or have more flexibility) to play around with the tool. These studies have their users do task-oriented use cases (such as playing major or minor chords \cite{nugraha2014pemanfaatan, xiao2010mirrorfugue}, play a specific song or piano piece \cite{chow2013music, sandnes2019enhanced,pan2018pilot} or simply practice the piano on their own for a specific amount of time \cite{weing2013piano, raymaekers2014game}). In some studies, adding familiar and entertaining elements have allowed experiments that focused on gamification, and the ability of the users to complete quests as an alternative approach to measuring performance and learning. 
 
@@ -495,7 +509,7 @@ Other evaluation methods and tools demonstrated their specific advantages and di
 
 Text here. 
 
-\subsection{Learning modes}
+\subsection{Learning modes for independent and sustained novice practice}
 \label{subsec: learn}
 
 \begin{figure*}[t]
