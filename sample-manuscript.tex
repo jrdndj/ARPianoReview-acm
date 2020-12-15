@@ -64,6 +64,15 @@
 \usepackage{pifont}
 \usepackage{wasysym}
 \usepackage{amssymb}
+\usepackage{tabularx}
+
+\usepackage{todonotes}
+\let\xtodo\todo
+\renewcommand{\todo}[1]{\xtodo[inline]{#1}}
+\newcommand{\itodo}[1]{\xtodo[inline]{#1}}
+\newcommand{\todor}[1]{\textcolor{red}{#1}}
+\newcommand{\insertref}[1]{\xtodo[color=green!40]{#1}}
+\newcommand{\todos}[1]{\xtodo[inline,color=yellow!50]{Sven: #1}}
 
 
 \newcommand{\red}[1]{\textcolor{red}{#1}}
@@ -128,20 +137,32 @@ Humans have been using and learning musical instruments for several centuries. I
 %%
 \begin{CCSXML}
 <ccs2012>
-   <concept>
-       <concept_id>10003120.10003121.10003125</concept_id>
-       <concept_desc>Human-centered computing~Interaction devices</concept_desc>
-       <concept_significance>500</concept_significance>
-       </concept>
-   <concept>
-       <concept_id>10010405.10010489.10010491</concept_id>
-       <concept_desc>Applied computing~Interactive learning environments</concept_desc>
-       <concept_significance>300</concept_significance>
-       </concept>
+    <concept>
+        <concept_id>10010405.10010469.10010475</concept_id>
+        <concept_desc>Applied computing~Sound and music computing</concept_desc>
+        <concept_significance>500</concept_significance>
+    </concept>
+    <concept>
+        <concept_id>10003120.10003121</concept_id>
+        <concept_desc>Human-centered computing~Human computer interaction (HCI)</concept_desc>
+        <concept_significance>500</concept_significance>
+    </concept>
+    <concept>
+        <concept_id>10003120.10003121.10003125</concept_id>
+        <concept_desc>Human-centered computing~Interaction devices</concept_desc>
+        <concept_significance>500</concept_significance>
+    </concept>
+    <concept>
+        <concept_id>10010405.10010489.10010491</concept_id>
+        <concept_desc>Applied computing~Interactive learning environments</concept_desc>
+        <concept_significance>300</concept_significance>
+    </concept>
  </ccs2012>
 \end{CCSXML}
 
+\ccsdesc[500]{Human-centered computing~Human computer interaction (HCI)}
 \ccsdesc[500]{Human-centered computing~Interaction devices}
+\ccsdesc[300]{Applied computing~Sound and music computing}
 \ccsdesc[300]{Applied computing~Interactive learning environments}
 %%
 %% Keywords. The author(s) should pick words that accurately describe
@@ -161,7 +182,7 @@ In the past 500 years, acoustic musical instruments have matured from simple, le
 %%%
 %% This paragraph highlights how learning has been done in the past.
 %%%
-Learning an instrument has a long tradition in almost every culture, and the process does not differ widely between societies. Here, the very traditional way is that an experienced musician, the teacher, is passing on the knowledge to a novice, the student. Normally these sessions with the teacher and student are complimented by personal practice, acquiring the skills needed for the next session with a teacher. This method is not only true for learning a new instrument but also often for new languages. In the domain of learning new languages, we already have successful alternatives using computer-supported learning lessons, often fully replacing the teacher role using learning apps such as Duolingo\footnote{\url{https://duolingo.com/}}. While reading musical notes can be acquired in a similar matter, musical instruments are fundamentally different as there is a physical element to it - the art of producing a sound. However, researchers argue that by augmenting the musical instrument itself, guidance can be provided to the novice directly on and around the physical musical instrument. Just in the recent two decades, augmentations have been introduced to help novices in this process. String instruments like the violin \cite{overholt2005overtone}, woodwind instruments like the clarinet \cite{silva2008interaction}, pianos \cite{mcpherson2010augmenting} and many other instrument classes \cite{turchet2018some, newton2011examining} have been equipped with auxiliary hardware, peripherals and others sensors to improve sound quality, or track user motion while playing these instruments. Software features in the form of learning modules have also been introduced in these instruments. These allowed novices to practice on their own \cite{fober2007vemus},  interact with a virtual agent \cite{costalonga2008agent, tidemann2009groovy}, and read complex notation easily with the help of overlaid visualizations \cite{trujano2018arpiano, gerry2019adept, santiniaugmented}. These augmentations also introduced newer affordances that play an important role in learning \cite{dede1996evolution}. Therefore, it is important to study how learning a musical instrument augmented with digital technology improves the learning experience.
+Learning an instrument has a long tradition in almost every culture, and the process does not differ widely between societies. Here, the very traditional way is that an experienced musician, the teacher, is passing on the knowledge to a novice, the student. Normally these sessions with the teacher and student are complimented by personal practice, acquiring the skills needed for the next session with a teacher. This method is not only true for learning a new instrument but also often for new languages. In the domain of learning new languages, we already have successful alternatives using computer-supported learning lessons, often fully replacing the teacher role using learning apps such as Duolingo\footnote{\url{https://duolingo.com/}}. While reading musical notes can be acquired in a similar matter, musical instruments are fundamentally different as there is a physical element to it - the art of producing a sound. However, researchers argue that by augmenting the musical instrument itself, guidance can be provided to the novice directly on and around the physical musical instrument. Just in the recent two decades, augmentations have been introduced to help novices in this process. String instruments like the violin \cite{overholt2005overtone}, woodwind instruments (e.g. clarinet \cite{silva2008interaction}), pianos \cite{mcpherson2010augmenting} and other instrument classes \cite{turchet2018some, newton2011examining} have been equipped with auxiliary hardware, peripherals, and sensors to improve sound quality, or track user motion while playing these instruments. Software features in the form of learning modules have also been introduced in these instruments. These allowed novices to practice on their own \cite{fober2007vemus}, interact with a virtual agent \cite{costalonga2008agent, tidemann2009groovy}, and read complex notation easily with the help of overlaid visualizations \cite{trujano2018arpiano, gerry2019adept, santiniaugmented}. These augmentations also introduced newer affordances that play an important role in learning \cite{dede1996evolution}. Therefore, it is important to study how learning a musical instrument augmented with digital technology improves the learning experience.
 
 %%%
 %% This paragraph should now focus on pianos only and how augmenting a piano can improve the learning. 
@@ -174,7 +195,7 @@ The acoustic piano has been a popular choice by early stage musicians (7 out 10 
 %%% 
 %% This paragraph now flashes out the paper - with a particular focus on the contribution.
 %%%
-Due to the large number of presented augmented piano prototypes over the last years in various fields, the goal of this paper is to understand the general space, challenges as well as opportunities for piano augmentation. Thus, we first present a literature review on piano augmentation with a special focus on augmentation for an enhanced learning experience. Based on our literature review of sixty one (61) papers, we first present the current state-of-the-art of piano augmentation and then present future directions for augmented piano. Finally, we provide recommendations based on our discussion and relevant existing frameworks that support learning. 
+Due to the large number of presented augmented piano prototypes over the last years in various fields, the goal of this paper is to understand the general space, challenges as well as opportunities for piano augmentation. Thus, we first present a literature review on piano augmentation with a special focus on augmentation for an enhanced learning experience. Based on our literature review of sixty one (61) papers, we first present the current state-of-the-art of piano augmentation and then present future directions for augmented piano. Finally, we provide recommendations based on our discussion and relevant existing frameworks with the ultimate goal of augmenting the ideal piano prototype towards supporting several stages of piano learning. 
 
 %As a first goal, this paper aims to review the different types of augmentations done on the piano. These contributions will be analyzed based on the type of augmentation and how this improves the piano learning experience for the novice user. We did a literature scan on digital libraries and repositories and we found out that augmented piano prototypes form a great number of papers published compared to other augmented musical instruments (such as the guitar, drum, flute, violin and many others). These augmentations and contributions have been designed with varying contexts in mind. As such, replicating these studies will depend on various factors such as accessibility of required hardware, difficulty of recreating assets, available open-source libraries and willing participants for user studies. Thus, as a second goal, we intend to guide our readers on future directions in introducing novel contributions in the augmented piano. We shall do this by summarizing and organizing these state-of-the-art contributions into categories. Then, we shall provide recommendations based on our discussion and relevant existing frameworks that support learning. 
 
@@ -187,76 +208,83 @@ Due to the large number of presented augmented piano prototypes over the last ye
 %Several technologies have enabled the creation of hardware, learning modes and interactive spaces. Over the last 20 years, we have observed progress in hardware computing power, tracking of elements in real-time (such has hand, object tracking) and in authoring AR tools, plug-ins and applications. These technologies are already seen and applied in several settings such as in tourism \cite{kounavis2012enhancing}, learning \cite{santos2013augmented}, manufacturing \cite{thomas1992augmented}, pilot training \cite{macchiarella2004augmented} and many others.
 
 
-\section{Background}
-\label{sec: bg}
-When learning music and how to play musical instruments, different methodologies and instructional settings are usually considered. There are four (4) major methodologies that formal institutions integrate in their techniques when teaching music and instruments. These are (1) Kodály method \cite{choksy1974kodaly}, (2) Orff Schulwerk \cite{shamrock1997orff}, simply referred to as the Orff approach, (3) Dalcroze eurhythmics \cite{mead1994dalcroze} and the (4) Suzuki method \cite{peak1998suzuki}. The Kodály method aims its learners to have a solid grasp of music theory and music notation on both verbal and written forms. In this technique, hand signals, referred to as solfège, along with musical shorthand notation, and rhythm verbalization are used to teach children learners. The Orff Schulwerk approach tackles its pupils with the rudimentary forms of music at an early stage. The Orff approach considers the body as a percussive instrument, as such it fosters self-discovery and improvisation which moves far away from repetitive mechanical drills. The Dalcroze method is considered as the rhythm gymnastics approach to music learning. Novices are instructed to emphasize physical awareness and engage with music involving all their senses and even kinesthetic skills. The Suzuki method draws inspiration in music learning similar to the approaches of learning one's native language. It describes an ideal environment that considers, high-quality music samples, rote (mechanical) training and repetition. Apart from these four internationally-renown methods, there are other approaches that have been influential to music learning as well. 
+\section{Background on Music Learning}
+When learning music and how to play musical instruments, different methodologies and instructional settings are usually considered. There are four major methodologies that formal institutions integrate in their techniques when teaching music and instruments. %These are (1) Kodály method \cite{choksy1974kodaly}, (2) Orff Schulwerk \cite{shamrock1997orff}, simply referred to as the Orff approach, (3) Dalcroze eurhythmics \cite{mead1994dalcroze} and the (4) Suzuki method \cite{peak1998suzuki}.
+(1)~The Kodály method \cite{choksy1974kodaly} aims its learners to have a solid grasp of music theory and music notation on both verbal and written forms. In this technique, hand signals, referred to as solfège, along with musical shorthand notation, and rhythm verbalization are used to teach children learners. (2) The Orff Schulwerk \cite{shamrock1997orff} approach tackles its pupils with the rudimentary forms of music at an early stage. The Orff approach considers the body as a percussive instrument, as such it fosters self-discovery and improvisation which moves far away from repetitive mechanical drills. (3) The Dalcroze method \cite{mead1994dalcroze} is considered as the rhythm gymnastics approach to music learning. Novices are instructed to emphasize physical awareness and engage with music involving all their senses and even kinesthetic skills. (4) The Suzuki method \cite{peak1998suzuki} draws inspiration in music learning similar to the approaches of learning one's native language. It describes an ideal environment that considers, high-quality music samples, rote (mechanical) training and repetition. Apart from these four internationally-renown methods, there are other approaches that have been influential to music learning as well. 
 
-In addition, the music learning process considers several domains such as the psychomotor domain, the cognitive domain and the affective domain of its learners. The psychomotor domain in music education focuses on the development of skills of the learner in relation to visual, auditory and tactile perception \cite{simpson1966classification} and the movements and responses that the body performs from these stimuli. The cognitive domain in music learning describes the process of how a learner acquires knowledge of important concepts and foundations in music. Understanding how the learner acquires, retains and applies knowledge in the music learning process is considered a strategic approach that leads to more effective music learning experience \cite{hanna2007new}. This domain works well with the different phases of music making such as performing, improvising, composing, arranging and even conducting. As these activities may require precise cognitive processing, having a concrete foundation of these procedural skills ensures proper development for the learner \cite{westerlund2003reconsidering}. The affective domain considers the willingness of the learner to receive, reflect and share what they have acquired during the music learning process. This domain also considers music appreciation and sensitivity as response to the emergence of music education as an aesthetic learning process \cite{mccarthy2002music}. Here, learners use music with their feelings (thus the term affective) and are evoked into aesthetic experiences. 
+In addition, the music learning process considers several domains such as the psychomotor domain, the cognitive domain, and the affective domain of its learners. The psychomotor domain in music education focuses on the development of skills of the learner in relation to visual, auditory and tactile perception \cite{simpson1966classification} and the movements and responses that the body performs from these stimuli. The cognitive domain in music learning describes the process of how a learner acquires knowledge of important concepts and foundations in music. Understanding how the learner acquires, retains and applies knowledge in the music learning process is considered a strategic approach that leads to more effective music learning experience \cite{hanna2007new}. This domain works well with the different phases of music making such as performing, improvising, composing, arranging and even conducting. As these activities may require precise cognitive processing, having a concrete foundation of these procedural skills ensures proper development for the learner \cite{westerlund2003reconsidering}. The affective domain considers the willingness of the learner to receive, reflect and share what they have acquired during the music learning process. This domain also considers music appreciation and sensitivity as response to the emergence of music education as an aesthetic learning process \cite{mccarthy2002music}. Here, learners use music with their feelings (thus the term affective) and are evoked into aesthetic experiences. 
+
+In summary, there are over the time there have been many approaches to teach a new instrument to novices none of which is superior over to other. This, allows for instrument and especially piano augmentation to pick from various approaches to improve learning. 
+
 
 %\subsection{Piano Learning}
 %retain this background: How do people learn the piano? what are the different stages of learning the piano? what stages in piano learning have been augmented by technology? what are the existing gaps in this process? How much virtuality (in miligram's continuum) has been included in piano? 
 
 %\subsection{Augmented Reality Piano Prototypes}
 %Augmented Reality
-Augmented reality piano teaching systems
-Design Factors affecting augmented reality piano teaching systems (hardware, software, content)
+
+%Augmented reality piano teaching systems
+%Design Factors affecting augmented reality piano teaching systems (hardware, software, content)
 
 \section{Method}
-\label{sec: method}
-We did a literature review following the \textit{Preferred Reporting Items for Systematic Reviews and Meta-Analyses} technique, also known as \textbf{PRISMA} \cite{moher2009preferred}. Since this paper performs a review with learning and augmentation as a focus, we also followed the techniques in the works of \cite{santos2013augmented, schneegass2016mobile, kljun2015transference, blattgerste2019augmented, mcpherson2015buttons, delgado2011state}.  This guided us further on how to analyse and review these augmented piano prototypes for this specific context. The approach included a  qualitative-analysis phase that aims to review these innovations in a specific context. The steps performed in this systematic review is as follows: 
+To understand the space of augmented pianos, in the following, we present a literature review following the \textit{Preferred Reporting Items for Systematic Reviews and Meta-Analyses} (\textbf{PRISMA}) technique \cite{moher2009preferred}. Since this paper performs a review with learning and augmentation as a focus, we also followed the techniques in the works of \cite{santos2013augmented, schneegass2016mobile, kljun2015transference, blattgerste2019augmented, mcpherson2015buttons, delgado2011state}. This guided us further on how to analyse and review these augmented piano prototypes for this specific context. The approach included a  qualitative-analysis phase that aims to review these innovations in a specific context. 
+
+
+
+The steps performed in this systematic review is as follows: 
 
 \subsection{Search for Prototypes}
-\label{subsec: search}
-We did a literature search between March to October 2020 in several digital libraries such as Google Scholar, ACM Digital Library and IEEE Xplore Digital Library. The search strings used where:
-\begin{enumerate}
-    \item "augmented reality piano" OR "AR piano" OR "augmented piano" 
-    \item "augmented reality keyboard" OR "AR keyboard" OR "augmented keyboard"
-    \item "augmented reality guitar" OR "AR guitar" OR "augmented guitar"
-    \item "augmented reality drum" OR "AR drum" OR "augmented drum"
-    \item "augmented reality violin" OR "AR violin" OR "augmented violin"
-    \item "augmented reality flute" OR "AR flute" OR "augmented flute"
-\end{enumerate}
-The search included journal articles, conference proceedings and other articles that are written in English. Some articles were not written in English but had available translations. These were included as well. A total of 1,206 articles were found from this initial search from these online libraries. Not filtering duplicates, there were 595 articles on piano and keyboard (49.3\% of the results), 156 on drum (12.9\% of the results), 187 on guitar (15.5\% of the results), 237 on violin (19.7\% of the results) and 31 on flute (2.6\% of the results). 
+%\label{subsec: search}
+We did a literature search between March to October 2020 in several digital libraries such as Google Scholar, ACM Digital Library and IEEE Xplore Digital Library. As search terms we used all combination of the following three keywords \{\texttt{"augmented reality", "AR", "augmented"}\} in combination with \{\texttt{"piano", "keyboard", "guitar", "drum", "violin", "flute"}\}. Resulting in search terms such as \{\texttt{"augmented reality piano"}\}.
+%\begin{enumerate}
+%    \item "augmented reality piano" OR "AR piano" OR "augmented piano" 
+%    \item "augmented reality keyboard" OR "AR keyboard" OR "augmented keyboard"
+%    \item "augmented reality guitar" OR "AR guitar" OR "augmented guitar"
+%    \item "augmented reality drum" OR "AR drum" OR "augmented drum"
+%    \item "augmented reality violin" OR "AR violin" OR "augmented violin"
+%    \item "augmented reality flute" OR "AR flute" OR "augmented flute"
+%\end{enumerate}
+We included only scientific articles written in English. Some articles were not written in English but had available translations. These were included as well. We found a total of 1,206 articles from our initial search terms from these online libraries. Not filtering duplicates, there were 595 articles on piano and keyboard (49.3\% of the results), 156 on drum (12.9\% of the results), 187 on guitar (15.5\% of the results), 237 on violin (19.7\% of the results) and 31 on flute (2.6\% of the results). 
 
 \subsection{Inclusion Criteria}
-\label{subsec: criteria}
+%\label{subsec: criteria}
 Since the focus of this survey is on augmented piano prototypes and in relation with piano learning, we filtered these papers based on a specific inclusion criteria. This is described below: 
 \begin{enumerate}
-    \item The paper discusses a prototype with the augmented piano as the main focus.  
-    \item The augmented piano prototype is meant for playing, learning or teaching the piano.
-    \item The prototype fits the description of \textit{augmented} as seen in Section \ref{sec: bg}.
+    \item The paper discusses a piano
+    \item The prototype is meant for playing, learning, or teaching
+    \item The prototype is an augmented piano%as seen in Section \ref{sec: bg}.
 \end{enumerate}
-These inclusion criteria were manually performed at the best judgment of the authors. Following this criteria, we resulted to sixty-one (61) articles. These papers discussed the design and evaluation of augmented piano prototypes. There are number of studies that described an augmented piano equipped with an auxiliary peripheral (meant for other purposes such as determining user posture using motion-capture cameras) but these were filtered out as well as it does not fit the first and second bullets in the criteria mentioned above.  
+The authors classified all \red{1,206} initial papers based on the above criteria, which resulted in a selection of \red{61} articles. These papers discussed the design and evaluation of augmented piano prototypes.
+
+Importantly, our criteria excluded studies which augmented piano equipped with auxiliary peripherals, e.g., posture studies using motion-capture cameras \cite{}.
 
 \subsection{Qualitative Analysis}
-We performed a qualitative analysis of the different papers retrieved after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 61 articles do not represent 61 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype.
 
-\subsection{Data Gathering}
-\label{subsec: gathering}
-A form was drafted to facilitate the gathering of data from the 61 included articles. The form seeks to retrieve the following information: 
-\begin{enumerate}
-    \item publication details
-    \item contributions
-    \item type of augmentation
-    \item citation count
-    \item design and results of the user study
-\end{enumerate}
-The publication details include the title of the paper, year of publication, authors etc. The contributions of each paper were extracted and analyzed as well. The use of augmentation refers to the set of features that were added into the piano - either hardware, software or both. The design and results of the user study refer to the description of applicable user studies and tests. Other features include sample size, method, questionnaire and tools used to conduct the user tests.
+The final 61 paper which we identified using the structured literature review as described above served as the corpus for an in depth analysis of augmented piano prototypes. We designed the review to easily recognize common trends among the papers. Note that the goal is not to correctly describe which prototype is an augmented piano or not, but rather to gather enough examples of pianos that have been effectively-augmented towards playing or learning the piano.  
 
-The review was designed to easily recognize common trends among the papers included in this study. Note that the goal is not to correctly describe which prototype is an augmented piano or not, but rather to gather enough examples of pianos that have been effectively-augmented towards playing or learning the piano.  
+In a next step, we classified the gathered literature by identifying them by themes, intent, and type of augmentation. These results will be presented and discussed in the following sections. 
+
+%We performed a qualitative analysis of the different papers retrieved after performing the steps at subsection \ref{subsec: search}. We used the criteria defined in subsection \ref{subsec: criteria}. This gave us a clearer understanding of the prototypes in these articles. Note that these 61 articles do not represent 61 unique prototypes because a small fraction of these studies discussed advancements in the development of the same prototype.
+
+%\subsection{Data Gathering}
+%\label{subsec: gathering}
+%A form was drafted to facilitate the gathering of data from the 61 included articles. The form seeks to retrieve the following information: (1) publication details, (2) contributions, (3) type of augmentation, (4) citation count, and (5) design and results of the user study.
+%The publication details include the title of the paper, year of publication, authors etc. The contributions of each paper were extracted and analyzed as well. The use of augmentation refers to the set of features that were added into the piano - either hardware, software, or both. The design and results of the user study refer to the description of applicable user studies and tests. Other features include sample size, method, questionnaire, and tools used to conduct the user tests.
+
+
 
 \section{Trends in Augmented Piano Prototypes}
-\label{sec: trends}
+%\label{sec: trends}
 
 %\subsection{Trends in Non-AR augmented Piano Prototypes}
 
 
 \begin{table*}[h]
-\caption{Table of augmented piano studies and a checklist of their features as described in section \ref{sec: trends}. Legend: \textit{\#}= number of citations; \textit{GR}= Gesture Recognition and Optical Scanners; \textit{MG}= magnets and resonators; \textit{AX}= other auxiliary hardware and peripherals attached; \textit{SN}= synthesizers ; \textit{PV}= projections and visualizations; \textit{KB}= AR keyboard; \textit{AT}= AR agents and tutors; \textit{PR}= piano roll and other visuals that simplify chords and notes; \textit{US}= user study; \textit{HT}= hand tracking; \textit{LM}= learning modes.}
+\caption{The corpus of the augmented piano papers and their features. Legend: \textit{\#} = number of citations; \textit{GR} = Gesture Recognition and Optical Scanners; \textit{MG} = magnets and resonators; \textit{AX} = other auxiliary hardware and peripherals attached; \textit{SN} = synthesizers ; \textit{PV}= projections and visualizations; \textit{KB} = AR keyboard; \textit{AT} = AR agents and tutors; \textit{PR} = piano roll and other visuals that simplify chords and notes; \textit{US} = user study; \textit{HT} = hand tracking; \textit{LM} = learning modes.}
 \label{tab:overview}
-\resizebox{!}{.342\paperheight}{%
-\begin{tabular}{ll|l|r|c|c|c|c|c|c|c|c|c|c|c|l} \hline \hline
-\textbf{Paper} & \textbf{Author(s)}        & Year & \# & \textbf{GR} & \textbf{MG} & \textbf{AX} & \textbf{SN} & \textbf{PV}  & \textbf{KB} & \textbf{AT} & \textbf{PR} & \textbf{US} & \textbf{HT} & \textbf{LM} &  \textbf{more info} \\ \hline
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllr|c|c|c|c|c|c|c|c|c|c|c|l} \toprule
+\textbf{Paper} & \textbf{Author(s)}        & \textbf{Year} & \textbf{\#} & \textbf{GR} & \textbf{MG} & \textbf{AX} & \textbf{SN} & \textbf{PV}  & \textbf{KB} & \textbf{AT} & \textbf{PR} & \textbf{US} & \textbf{HT} & \textbf{LM} &  \textbf{more info} \\ \midrule
 P1  & \citet{ogata2017keyboard}             & 2017  &  1  &  \ding{51}  &         &            &             &  \ding{51}  &       &&& \ding{51} & \ding{51} && \textit{motion tracking enhancing performance; shape distortion} \\ \hline
 P2  & \citet{mcpherson20172012}             & 2017  &  41 &   \ding{51} &         &  \ding{51} &             &             &       &&&&&& \textit{surface coating and capacitive sensing} \\ \hline
 P3  & \citet{mcpherson2013space}            & 2013  &  16  & \ding{51} &         &  \ding{51}  &             &             &       &&&  \ding{51} &&& \textit{oscillatory motion finger tracking} \\ \hline
@@ -317,30 +345,33 @@ P59   & \citet{sandnes2019enhanced}         & 2019 & 0          &  &&&&&        
 P60   & \citet{kim2014ar}                   & 2014 & 11         & &&&&& \ding{51} &           & \ding{51} & \ding{51} &           &           & \\ \hline
 P61   &  \citet{xiao2011duet}               & 2011 & 7          &  &&&&&          &           & \ding{51} & \ding{51} &           & \ding{51} & \textit{practice modes}\\ \hline 
 P62   & \citet{xu20195}                     & 2019 & 0          &  &&&&&         & \ding{51} & \ding{51} &           &           & \ding{51} & \textit{self reflection}\\ \hline 
-P63   & \citet{karolus2020hit}              & 2020 & 1          &  && \ding{51} & &&         &  &  & \ding{51} &           &  & \textit{EMG for improvisation}\\ \hline 
-      &                                     &      & \textit{\={x}}=18 & &&&&&  &  &     &       &      &      & \\ \hline \hline
+P63   & \citet{karolus2020hit}              & 2020 & 1          &  && \ding{51} & &&         &  &  & \ding{51} &           &  & \textit{EMG for improvisation}\\ \bottomrule
+      %&                                     &      & \textit{\={x}}=18 & &&&&&  &  &     &       &      &      & \\  \bottomrule
 \end{tabular}%
 }
 %\caption*{Legend: \textbf{\#}= number of citations; \textbf{GR}= Gesture Recognition and Optical Scanners; \textbf{MG}= magnets and resonators; \textbf{AX}= other auxiliary hardware and peripherals attched; \textbf{PR}= projections and visualizations; \textbf{KB}= AR keyboard; \textbf{AT}= AR agents and tutors; \textbf{PR}= piano roll and other visuals that simplify chords and notes; \textbf{US}= user study; \textbf{HT}= hand tracking; \textbf{LM}= learning modes.}
 \end{table*}
 
-Sixty-one (61) articles discussing augmented piano prototypes have been evaluated and reviewed in this paper. The data collected about these papers can be found in Table \ref{tab:overview}. Following the qualitative analysis and the data gathering that took place, we were able to identify contribution categories found in these augmented pianos. These are (1) \textbf{KB}: an AR keyboard that is seen by or displayed to the users for them to \textit{"press"}; (2) \textbf{AT}: an AR agent or tutor that is designed to help the user play the piano; (3) \textbf{PR}: refers to the piano roll and other similar visualizations, guiding the users on what keys to  \textit{"press"} in the piano; (4) \textbf{US}: a form of evaluation with the users that intends to assess the usability of the augmented piano prototype; (5) \textbf{HT}: use of hand tracking and similar technology to register, display and render graphics in space and (6) \textbf{LM}: refers to the set of interfaces and modes that the user can utilize in helping them learn the piano. These contributions were counted, marked and labeled as see in the table mentioned earlier. This provides the readers a simplified view of the contributions in augmented piano prototypes. These data points were also sorted by year, by category type in order to visualize the trends that we have observed. The respective charts and graphs describing these trends can be found in Figure \ref{fig:doublechart}. From these figures, we show the rise and trends on AR prototypes within the last 2 decades. The most common contribution categories and how they are bundled together across the years can also be seen. 
+Sixty-one (61) articles discussing augmented piano prototypes have been evaluated and reviewed in this paper. The data collected about these papers can be found in Table \ref{tab:overview}. In total, we identified 6 themes in the \red{61} augmented pianos papers. These are (1) \textbf{KB}: an AR keyboard that is seen by or displayed to the users for them to \textit{"press"}; (2) \textbf{AT}: an AR agent or tutor that is designed to help the user play the piano; (3) \textbf{PR}: refers to the piano roll and other similar visualizations, guiding the users on what keys to  \textit{"press"} in the piano; (4) \textbf{US}: a form of evaluation with the users that intends to assess the usability of the augmented piano prototype; (5) \textbf{HT}: use of hand tracking and similar technology to register, display and render graphics in space and (6) \textbf{LM}: refers to the set of interfaces and modes that the user can utilize in helping them learn the piano. These contributions were counted, marked and labeled as see Table \ref{tab:overview}. This provides the readers a simplified view of the contributions in augmented piano prototypes. These data points were also sorted by year, by category type in order to visualize the trends that we have observed. The respective charts and graphs describing these trends can be found in Figure \ref{fig:doublechart}. From these figures, we show the rise and trends on AR prototypes within the last 2 decades. The most common contribution categories and how they are bundled together across the years can also be seen. 
 
-The earliest prototype included in our systematic review was from the year 2005. However, while there have been patents and products filed as \textit{"augmented reality piano"} as early as the year 1998, these were not included in the review because of the inclusion criteria described in subsection \ref{subsec: criteria}. Also, details that allow the author to review these patents systematically were not easily-accessible.
+%The earliest prototype included in our systematic review was from the year 2005. However, while there have been patents and products filed as \textit{"augmented reality piano"} as early as the year 1998, these were not included in the review because of the inclusion criteria described in subsection \ref{subsec: criteria}. Also, details that allow the author to review these patents systematically were not easily-accessible.
 
-Between the years 2005 to 2010, along with the rise of mobile technologies and better phone cameras (especially the iPhone \cite{querashi2012apple}), a handful of studies have attempted to develop augmented piano prototypes. These studies featured an virtual keyboard and piano roll notation that users can operate with. We can say that these contribution categories have been the earliest attempts to innovate piano learning with AR. We believe that the primary focus during these years, was to make piano learning exciting by introducing a \textit{"virtual"} keyboard that can be viewed anywhere. As the typical piano instrument is heavy and bulky, having augmented keyboards was the obvious and portable approach to begin with. As humans were slowly shifting from personal computing to mobile computing, the trend in piano learning was also headed towards the same direction.
+The earliest prototype included in our systematic review was from the year 2005. Between the years 2005 to 2010, along with the rise of mobile technologies and better phone cameras (especially the iPhone \cite{querashi2012apple}), a handful of studies have attempted to develop augmented piano prototypes (\red{X} papers). These studies featured an virtual keyboard and piano roll notation that users can operate with. We can say that these contribution categories have been the earliest attempts to innovate piano learning with AR. We understand that the primary focus during these years, was to make piano learning exciting by introducing a \textit{"virtual"} keyboard that can be viewed anywhere. As the typical piano instrument is heavy and bulky, having augmented keyboards was the obvious and portable approach to begin with. As humans were slowly shifting from personal computing to mobile computing, the trend in piano learning was also headed towards the same direction.
 
-Between the years 2011 to 2015, an obvious rise of augmented piano prototypes published can be seen. The most common contributions during this period was the piano roll visualization. As mobile devices and their cameras were getting more powerful during this period, we believe that the focus may have shifted from bringing the classical piano into the mobile, to making the virtual keyboard more usable. Thus, user studies have to be utilized in order to assess this. Beyond usability, excitement and engagement were also key factors that need to be considered by these studies. Researchers had to innovate and introduce various learning modes to possibly make these user studies more realistic, and their results more accurate in relation to piano learning. Various use-cases and scenarios were introduced in user studies done by these papers. Practice modes, improving fingering accuracy, gamification and even supporting persons with disabilities (PWD's) were introduced. It was also in this period that the earliest known prototype to employ hand tracking \cite{huang2011piano} technology was also published. The work by \citet{weing2013piano} uses piano roll visualizations, employs hand tracking algorithms and introduces a gamified approach to learning modes for the users. Early use of agents and tutors as an addition to the augmented interfaces of the users were first introduced as well in these period. Similar to piano roll and learning modes, employing agents and tutors were embedded as part of interfaces that went beyond mobile. 3D technology was conceptualized in the latter years of this period as well. The rise of the Kinect \cite{zhang2012microsoft} allowed human beings to interact beyond their mobile devices, moving freely in interactives surfaces and spaces. As such, hand and body tracking along with virtual tutors that \textit{"sit beside the learner"} were made possible with this technology. Some of these innovations pulled out the \textit{augmented} in mobile, and brought it to the ubiquitous arena of ambient interfaces. With the use of Kinect and advanced 3D projectors \cite{yang2012augmented}, previously-addressed problems on AR piano and spatial registration in the mobile, have to be addressed when they were ported into multidimensional spaces. 
+Between the years 2011 to 2015, an obvious rise of augmented piano prototypes published can be seen. The most common contributions during this period was the piano roll visualization (\red{X} papers). As mobile devices and their cameras were getting more powerful during this period, we believe that the focus may have shifted from bringing the classical piano into the mobile, to making the virtual keyboard more usable. Thus, user studies have to be utilized in order to assess this. Beyond usability, excitement and engagement were also key factors that need to be considered by these studies. Researchers had to innovate and introduce various learning modes to possibly make these user studies more realistic, and their results more accurate in relation to piano learning. Various use-cases and scenarios were introduced in user studies done by these papers. Practice modes, improving fingering accuracy, gamification and even supporting persons with disabilities (PWD's) were introduced. It was also in this period that the earliest known prototype to employ hand tracking \cite{huang2011piano} technology was also published. \citet{weing2013piano} uses piano roll visualizations, employs hand tracking algorithms and introduces a gamified approach to learning modes for the users. Early use of agents and tutors as an addition to the augmented interfaces of the users were first introduced as well in these period. Similar to piano roll and learning modes, employing agents and tutors were embedded as part of interfaces that went beyond mobile. 3D technology was conceptualized in the latter years of this period as well. With depth-cameras becoming more affordable (e.g. Microsoft Kinect \cite{zhang2012microsoft}) humans are able to interact with surfaces beyond their mobile devices. As such, hand and body tracking along with virtual tutors that \textit{"sit beside the learner"} were made possible with this technology. Some of these innovations pulled out the \textit{augmented} in mobile, and brought it to the ubiquitous arena of ambient interfaces. With the use of Kinect and advanced 3D projectors \cite{yang2012augmented}, previously-addressed problems on AR piano and spatial registration in the mobile, have to be addressed when they were ported into multidimensional spaces. 
 
-Between the years 2016 to 2020, ubiquitous technologies (such us 3D, 360$^{\circ}$, raspberry pi sensors, etc) have disrupted how contributions in AR piano have to be designed. Piano roll visualizations, virtual keyboards and virtual agents have also been ported virtually-everywhere. As spatial registration in multidimensional space has been slowly addressed \cite{roberts2011spatial,novotny2013applications, billinghurst2008tangible} and applied in various environments, focus have shifted as well from mobile AR to tangible AR. Since keyboards, piano roll visualizations and agents can be displayed anywhere thanks to these innovations, humans still required tactile or haptic feedback when learning the piano. This was observed in the study of \citet{hamam2013effect} where he investigated on the kinesthetic and tactile feedback in relation to the quality of the learning experience in using digital tools. Because AR piano technologies should not replace the classical piano, but rather augment the learning experience \cite{yang2020modern}, prototypes have to be developed in a way that makes the learning experience as similar to the actual piano as possible. This entails having or feeling the sensation as if the user is playing with the real piano. This again shifted the trend from having a virtual keyboard to having piano roll visualizations that guide the user on how to press piano keys. Hand tracking technologies played a role in ensuring key and user press accuracy, rather than matching virtual keys with user presses. These piano prototypes have moved as well from individual learning experiences to enabling remote, virtual or even multi-user collaboration. However, these prototypes did not have piano learning as a focus. Instead they emphasized on piano performances which we consider as out of scope or beyond novice piano learning. 
+Finally, between the years 2016 to 2020, ubiquitous technologies (such us 3D, 360$^{\circ}$, raspberry pi, sensors) have disrupted how contributions in AR piano have to be designed. Piano roll visualizations, virtual keyboards and virtual agents have also been ported virtually-everywhere. As spatial registration in multidimensional space has been slowly addressed \cite{roberts2011spatial,novotny2013applications, billinghurst2008tangible} and applied in various environments, focus have shifted as well from mobile AR to tangible AR. Since keyboards, piano roll visualizations and agents can be displayed anywhere thanks to these innovations, humans still required tactile or haptic feedback when learning the piano. This was observed in the study of \citet{hamam2013effect} where he investigated on the kinesthetic and tactile feedback in relation to the quality of the learning experience in using digital tools. Because AR piano technologies should not replace the classical piano, but rather augment the learning experience \cite{yang2020modern}, prototypes have to be developed in a way that makes the learning experience as similar to the actual piano as possible. This entails having or feeling the sensation as if the user is playing with the real piano. This again shifted the trend from having a virtual keyboard to having piano roll visualizations that guide the user on how to press piano keys. Hand tracking technologies played a role in ensuring key and user press accuracy, rather than matching virtual keys with user presses. These piano prototypes have moved as well from individual learning experiences to enabling remote, virtual or even multi-user collaboration. However, these prototypes did not have piano learning as a focus. Instead they emphasized on piano performances which we consider as out of scope or beyond novice piano learning. 
+
+\todos{Add more here - a summary - outlook}
 
 \section{Strategies in Designing Augmented Pianos}
-\label{sec: strat}
+%\label{sec: strat}
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=8cm]{figures/yearchart.png}
-    \caption{Number of augmented piano papers in the last two decades. N.B. The the figure here describes the number of papers filtered from the inclusion criteria in subsection \ref{subsec: criteria}. }
+    \includegraphics[width=.45\textwidth]{figures/yearchart.png}
+    \caption{The distribution of the \red{61} augmented piano papers over the last two decades included in our literature review. %N.B. The the figure here describes the number of papers filtered from the inclusion criteria in subsection \ref{subsec: criteria}.
+    }
     \label{fig:doublechart}
 \end{figure}  
 % reserved caption \textbf{Right:} Trend of contribution categories on the AR piano papers published within the last two decades. We have used moving average values to visualize the trends in these different contribution categories. 
@@ -432,8 +463,8 @@ What separates HCI research from other disciplines is it properly gauge the impa
 \begin{table*}[t]
 \caption{List of studies with user evaluation (labelled as \textit{US} as seen from Table \ref{tab:overview}). This table provides an overview of their treatments, metrics, constructs and tools used. \textit{Treatment Legend}: \textit{ex}= free usage and exploration modes; \textit{md}= marker detection; \textit{ob}= observation of prototype usage; \textit{pc}= play piano chords on the piano;  \textit{pl}= play a piece in the piano; \textit{pr}= practice the piano; \textit{qu}= complete quest in a game or gamified interface.  \textit{Metrics Legend}:   \textit{At}= attractiveness; \textit{CL}= cognitive load; \textit{FI}= accuracy of finger information; \textit{Im}= level and quality of immersiveness; \textit{Mo}= level of user motivation; \textit{No}= accuracy of notation; \textit{Op}= functional check of the different features of the prototype; \textit{Sa}= satisfaction rating of the prototype; \textit{Sk}= improvement in skill; \textit{Us}= ease of use and usability; \textit{TI}= time interval and usage of the system; \textit{Sc}= scoring (for gamified prototypes). \textbf{Tools Legend}: \textit{OEQ}= open ended questionnaires; \textit{QUE}= used a peer-reviewed questionnaire/instrument; \textit{PSP}= player scoring plug-ins; \textit{REC}= observations from recordings; \textit{SMQ}= self made questionnaire; \textit{SSI}= semi structured interviews; \textit{TTM}= time tracking mechanisms. }
 \label{tab: us-all}
-\resizebox{!}{.21\paperheight}{%
-\small\begin{tabular}{lcllllll} \toprule
+%\resizebox{\textwidth}{!}{%
+\small\begin{tabularx}{\textwidth}{lclllllX} \toprule
 \textbf{Ref.}                           & \textbf{Size} (\textit{n})    & \textbf{Treatment}    & \textbf{Metrics or constructs}    & \textbf{Tools} & \textbf{Notes }\\ \midrule
 %P1 \cite{huang2011piano}              & 2011 &        & a                         & a                             & a                    \\
 \cite{nugraha2014pemanfaatan}        & 8            & md, pc      & At, Op, Us             & SMQ                   & \\ \hline
@@ -448,20 +479,20 @@ What separates HCI research from other disciplines is it properly gauge the impa
 \cite{li2018application}             & 17           & ex, ob      & Mo, Op                 & QUE*                  & \textit{*instrument from }\cite{zhang2000relationship}    \\ \hline
 \cite{leonard2013virtual}            & 20           & ex, pr      & Op, Sa, Sk             & OEQ, TTM              &    \\ \hline
 \cite{raymaekers2014game}            & \textendash* & ex, pl, pr  & At, Sa, Us             & OEQ, REC              & \textit{*open demo UT} \\ \hline
-\cite{rogers2014piano}               & 74*          & pc, pl, pr  & At, CL, Sa, Sk, Us, TI & QUE$\dagger$            & *$n_{1}$=56, \begin{math}n_{2}\end{math}=18, $\dagger$\cite{ekstrom1976manual, klepsch2012subjective, hassenzahl2003attrakdiff, wrigley2013ecological}\\ \hline
+\cite{rogers2014piano}               & 74*          & pc, pl, pr  & At, CL, Sa, Sk, Us, TI & QUE$^\dagger$            & *$n_{1}$=56, \begin{math}n_{2}\end{math}=18, $^\dagger$\cite{ekstrom1976manual, klepsch2012subjective, hassenzahl2003attrakdiff, wrigley2013ecological}\\ \hline
 \cite{sun2018mr}                     & 20           & ex, pc, pl  & Sc, Sk, Us, TI         & PSP, TTM              &   \\ \hline
-\cite{molloy2019mixed}               & 23           & pl          & At, Im, Mo, Us         & OEQ, QUE*, SSI        & *SUS \cite{lewis2009factor}\\ \hline
+\cite{molloy2019mixed}               & 23           & pl          & At, Im, Mo, Us         & OEQ, QUE*, SSI        & *SUS\cite{lewis2009factor}\\ \hline
 \cite{pan2018pilot}                  & 13           & pl, pr      & Sc, Sk                 & OEQ, PSP, SMQ, SSI    &  \\ \hline
 \cite{kim2014ar}                     & \textendash* & ex, md      & FI, Op                 & REC                   & \textit{*n not reported}  \\ \hline
 \cite{xiao2011duet}                  & 3            & ex, ob      & Im, Us                 & SSI                   &   \\ \hline 
 \cite{ogata2017keyboard}             & 3            & ex, pl      & Op, Sa                 & SMQ                   &   \\ \hline 
 \cite{mcpherson2013space}            & 8            & pl, md      & FI, No, Op             & PSP, TTM              &   \\ \hline 
-\cite{mcpherson2011multidimensional} & 30           & ex, pl      & FI, No, Op, Us, TI     & REC, TTM              & *3 tests with 10 $n$ each  \\ \hline 
+\cite{mcpherson2011multidimensional} & 30*           & ex, pl      & FI, No, Op, Us, TI     & REC, TTM              & *3 tests with 10 $n$ each  \\ \hline 
 \cite{granieri2019reach}             & -*           & ex          & Im                     & REC                   & \textit{*open demo UT, n not reported}  \\ \hline 
-\cite{karolus2020hit}                & 12           & ex, pl      & At, CL, Op, Sa, TI     & OEQ, QUE, TTM                  &  *NASA TLX\cite{hart1988development}, CSI\cite{carroll2009creativity}, HEMA\cite{huta2010pursuing} \\ \midrule 
+\cite{karolus2020hit}                & 12           & ex, pl      & At, CL, Op, Sa, TI     & OEQ, QUE*, TTM                  &  *NASA TLX\cite{hart1988development}, CSI\cite{carroll2009creativity}, HEMA\cite{huta2010pursuing} \\ \midrule 
                                    & \textit{med.}=8.5 & \textit{\={x}}=14   &                   &                       & \\ \bottomrule
-\end{tabular}%
-}
+\end{tabularx}%
+%}
 %\caption*{\textbf{Treatment Legend}: \textbf{ex}= free usage and exploration modes; \textbf{md}= marker detection; \textbf{ob}= observation of prototype usage; \textbf{pc}= play piano chords on the piano;  \textbf{pl}= play a piece in the piano; \textbf{pr}= practice the piano; \textbf{qu}= complete quest in a game or gamified interface.  \textbf{Metrics Legend}:   \textbf{At}= attractiveness; \textbf{CL}= cognitive load; \textbf{FI}= accuracy of finger information; \textbf{Im}= level and quality of immersiveness; \textbf{Mo}= level of user motivation; \textbf{No}= accuracy of notation; \textbf{Op}= functional check of the different features of the prototype; \textbf{Sa}= satisfaction rating of the prototype; \textbf{Sk}= improvement in skill; \textbf{Us}= ease of use and usability; \textbf{TI}= time interval and usage of the system; \textbf{Sc}= scoring (for gamified prototypes). \textbf{Tools Legend}: \textbf{OEQ}= open ended questionnaires; \textbf{QUE}= used a peer-reviewed questionnaire/instrument; \textbf{PSP}= player scoring plug-ins; \textbf{REC}= observations from recordings; \textbf{SMQ}= self made questionnaire; \textbf{SSI}= semi structured interviews; \textbf{TTM}= time tracking mechanisms. }
 \end{table*}
 
@@ -510,7 +541,7 @@ A \textit{listen (attention)} mode allows novices to observe and listen in a son
  %   \label{fig:caigroup}
 %\end{figure}
 
-Other modes of interaction have also been introduced to aid learning and other piano-related activities. Learning with a partner \cite{xiao2011duet}, performing with a group \cite{gerry2019adept} and learning with a group \cite{cai2019design}. Other augmented piano prototypes also included a competitive mode \cite{cai2019design} to encourage learners to perform better during piano practice. 
+Other modes of interaction have also been introduced to aid learning and other piano-related activities. Learning with a partner \cite{xiao2011duet}, performing with a group \cite{gerry2019adept} and learning with a group \cite{cai2019design}. %Other augmented piano prototypes also included a competitive mode \cite{cai2019design} to encourage learners to perform better during piano practice. 
 
 \section{Discussion and Future Directions}
 Have a discussion here Jordan. how does this connect with piano learning? 
