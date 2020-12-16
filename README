@@ -1,5 +1,12 @@
 Abstract
-Humans have been using and learning musical instruments forseveral centuries. In the recent two decades, innovations augment-ing music instruments have been introduced to support learningof novice users and improvisation of performers. Of these innova-tions introduced, 49% consists of augmented piano prototypes alone.Given this figure, there has not been a review done on these proto-types describing the different trends and approaches in augmentingthe piano in relation to learning. In this paper, we present a sys-tematic review of augmented piano prototypes in contrast to otheraugmented music instruments. We gathered and analyzed datafrom papers published within the last two decades that describedan augmented piano prototype. Our findings present different con-tribution categories and their impact to piano design and learning.Lastly, we also present some recommendations and future direc-tions on how to improve the piano learning process with the use ofaugmented technologies.
+Humans have been using and learning musical instruments forseveral centuries. 
+In the recent two decades, innovations augment-ing music instruments have been introduced to support learningof novice users and improvisation of performers. 
+Of these innova-tions introduced, 49% consists of augmented piano prototypes alone. 
+Given this figure, there has not been a review done on these proto-types describing the different trends and approaches in augmenting the piano in relation to learning. 
+In this paper, we present a systematic review of augmented piano prototypes in contrast to otheraugmented music instruments. 
+We gathered and analyzed datafrom papers published within the last two decades that describedan augmented piano prototype. 
+Our findings present different con-tribution categories and their impact to piano design and learning. 
+Lastly, we also present some recommendations and future direc-tions on how to improve the piano learning process with the use ofaugmented technologies.
 
 CCS CONCEPTS
 Human-centered computing→Human computer interac-tion (HCI);Interaction devices;•Applied computing→Soundand music computing;Interactive learning environments.
